@@ -1,51 +1,329 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f9f8">
-  <meta name="description" content="Grupo Ciber OT se encuentra realizando una actualización de su plataforma digital.">
-  <title>Grupo Ciber OT | Estamos evolucionando</title>
+  <title>GrupoCiberOT | Ciberseguridad OT, TI e IoT</title>
+  <meta name="description" content="GrupoCiberOT integra ciberseguridad OT, tecnología, ingeniería y servicios para proteger la continuidad operacional de organizaciones críticas.">
+  <meta name="keywords" content="ciberseguridad OT, ciberseguridad industrial, TI, OT, IoT, continuidad operacional, OTRISKMAPS, GrupoCiberOT">
+  <meta name="author" content="GrupoCiberOT">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://grupociberot.cl/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="GrupoCiberOT | Ciberseguridad OT, TI e IoT">
+  <meta property="og:description" content="Tecnología, ingeniería y ciberseguridad para entornos críticos.">
+  <meta property="og:url" content="https://grupociberot.cl/">
+  <meta property="og:image" content="https://grupociberot.cl/images/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1b3a">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    :root{--ink:#25282b;--muted:#5f6870;--blue:#2f6fba;--green:#65a76f;--orange:#d77a43;--line:rgba(38,48,58,.12)}
-    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
-    body{min-height:100vh;display:grid;place-items:center;padding:28px;background:#f7f9f8;overflow-x:hidden;position:relative}
-    body:before,body:after{content:"";position:fixed;z-index:-1;pointer-events:none}
-    body:before{width:700px;height:700px;left:-330px;bottom:-330px;background:linear-gradient(135deg,rgba(215,122,67,.22),rgba(47,111,186,.10) 55%,transparent 56%);transform:rotate(8deg);filter:blur(2px)}
-    body:after{width:700px;height:700px;right:-350px;top:-350px;background:linear-gradient(135deg,rgba(101,167,111,.20),rgba(47,111,186,.10) 55%,transparent 56%);transform:rotate(8deg);filter:blur(2px)}
-    .geo{position:fixed;inset:0;z-index:-2;opacity:.35;background-image:linear-gradient(30deg,transparent 0 49%,rgba(80,100,115,.08) 49.2% 49.4%,transparent 49.6%),linear-gradient(150deg,transparent 0 49%,rgba(80,100,115,.06) 49.2% 49.4%,transparent 49.6%);background-size:260px 260px}
-    .shell{width:min(1120px,100%);min-height:min(720px,calc(100vh - 56px));display:grid;grid-template-columns:.85fr 1.15fr;background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.95);border-radius:28px;box-shadow:0 28px 80px rgba(32,49,65,.13);backdrop-filter:blur(16px);overflow:hidden}
-    .brand{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 44px;text-align:center;background:rgba(255,255,255,.48);border-right:1px solid var(--line)}
-    .brand img{width:min(420px,100%);height:auto;display:block}
-    .rule{width:86px;height:4px;margin-top:30px;border-radius:99px;background:linear-gradient(90deg,var(--green) 0 33%,var(--orange) 33% 66%,var(--blue) 66%)}
-    .brand p{max-width:330px;margin:18px 0 0;color:var(--muted);font-size:.94rem;line-height:1.65}
-    .content{display:flex;flex-direction:column;justify-content:center;padding:68px clamp(34px,6vw,78px)}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-    .eyebrow:before{content:"";width:28px;height:2px;background:var(--green);border-radius:10px}
-    h1{max-width:650px;margin:0;font-size:clamp(2.35rem,4vw,4.15rem);line-height:1.04;letter-spacing:-.045em;font-weight:760}h1 span{color:var(--blue)}
-    .lead{max-width:640px;margin:28px 0 0;color:var(--muted);font-size:clamp(1.02rem,1.5vw,1.17rem);line-height:1.8}
-    .message{max-width:640px;margin-top:24px;padding:22px 24px;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:14px;background:rgba(255,255,255,.66);color:#3e464c;line-height:1.7}.message strong{color:var(--ink)}
-    .footer{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);color:#737b81;font-size:.88rem;line-height:1.6}.footer strong{color:var(--blue)}
-    @media(max-width:820px){body{padding:16px}.shell{min-height:auto;grid-template-columns:1fr;border-radius:22px}.brand{padding:40px 28px 26px;border-right:0;border-bottom:1px solid var(--line)}.brand img{max-width:360px}.brand p{display:none}.content{padding:42px 28px 46px}h1{font-size:clamp(2.25rem,11vw,3.4rem)}}
-    @media(max-width:480px){.brand img{max-width:330px}.content{padding:36px 22px 40px}.message{padding:18px}}
-    @media(prefers-reduced-motion:no-preference){.shell{animation:appear .65s ease-out both}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
+    .about-tagline{background:#eef3ff;color:#24466f;text-align:center;padding:14px 20px;font-size:13px;font-weight:700;letter-spacing:.03em}
+    .team-section{padding:48px 0 42px}
+    .section-mini-head{margin-bottom:26px}
+    .section-mini-head h2{margin:0;font-size:36px}
+    .team-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .team-card{border:1px solid #e4e9f2;border-radius:6px;background:#fff;padding:14px 10px 16px;text-align:center;min-width:0}
+    .team-avatar{width:92px;height:92px;margin:0 auto 12px;border-radius:50%;background:#f0f4fa;display:grid;place-items:center;color:#7891ad;border:1px solid #dbe4ef}
+    .team-avatar svg{width:54px;height:54px;fill:#7891ad}
+    .team-card h3{margin:0 0 5px;color:#1b2e50;font-size:14px;line-height:1.25}
+    .team-card p{margin:0;color:#6d7890;font-size:11px;line-height:1.35}
+    .industry-strip{background:#eef3ff;color:#24466f;text-align:center;padding:11px 20px;font-size:12px;font-weight:600}
+    .network-section{padding:44px 0 20px}
+    .partner-placeholders{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:center}
+    .partner-placeholders div{min-height:72px;border:1px solid #e3e8f1;border-radius:5px;display:grid;place-items:center;text-align:center;padding:10px;color:#60708a;font-size:13px;font-weight:600;background:#fff}
+    @media(max-width:1050px){.team-grid{grid-template-columns:repeat(3,1fr)}.partner-placeholders{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:650px){.team-grid{grid-template-columns:repeat(2,1fr)}.partner-placeholders{grid-template-columns:repeat(2,1fr)}.section-mini-head h2{font-size:30px}.industry-strip{line-height:1.7}}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"GrupoCiberOT",
+    "url":"https://grupociberot.cl/",
+    "email":"contacto@grupociberot.cl",
+    "telephone":"+56 2 1234 5678",
+    "address":{"@type":"PostalAddress","streetAddress":"Av. del Valle Sur 570, Oficina 401, Ciudad Empresarial","addressLocality":"Huechuraba","addressRegion":"Santiago","addressCountry":"CL"}
+  }
+  </script>
 </head>
 <body>
-  <div class="geo" aria-hidden="true"></div>
-  <main class="shell">
-    <section class="brand">
-      <img src="Img/WhatsApp%20Image%202026-08-25%20at%2009.06.38%20(2).jpeg" alt="Grupo Ciber OT">
-      <div class="rule" aria-hidden="true"></div>
-      <p>Tecnología, innovación y compromiso para construir soluciones preparadas para los desafíos del futuro.</p>
-    </section>
-    <section class="content">
-      <div class="eyebrow">Sitio en actualización</div>
-      <h1>Estamos evolucionando <span>para ofrecerte una mejor experiencia.</span></h1>
-      <p class="lead">Actualmente nos encontramos realizando una actualización integral de nuestra plataforma digital. Este proceso forma parte de nuestro compromiso permanente con la innovación, la eficiencia y la seguridad.</p>
-      <div class="message"><strong>Muy pronto estaremos de regreso.</strong><br>Volveremos con nuevas soluciones, mejores herramientas y una experiencia renovada, diseñada para acompañarte de manera más eficiente.</div>
-      <div class="footer">Agradecemos sinceramente tu comprensión y confianza. <strong>Seguimos creciendo juntos.</strong></div>
-    </section>
-  </main>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio" aria-label="GrupoCiberOT, inicio">
+      <img src="images/logo.png" alt="GrupoCiberOT" class="brand-logo">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#industrias">Industrias</a>
+      <a href="#regulatorio">Marco Regulatorio</a>
+      <a href="#casos">Casos de Éxito</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<section id="inicio" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow light">GRUPOCIBEROT</p>
+      <h1>Integramos <span>TI</span>, <em>OT</em> e <strong>IoT</strong><br>para una Ciberseguridad Transversal y Efectiva</h1>
+      <p>GrupoCiberOT es un holding que integra tecnología, ingeniería y servicios especializados para proteger la continuidad operacional de organizaciones críticas.</p>
+      <div class="actions">
+    <a class="btn btn-orange" href="#nosotros">
+        Conocer GrupoCiberOT <span>→</span>
+    </a>
+
+    <a class="btn btn-outline-light" href="#soluciones">
+        Nuestras soluciones <span>→</span>
+    </a>
+</div>
+    </div>
+     <!-- Este es un comentario en HTML 
+   <div class="hero-visual">
+      <div class="hex h-top"><b>OT</b><small>Procesos<br>Operacionales</small></div>
+      <div class="hex h-left"><b>IoT</b><small>Dispositivos<br>Conectados</small></div>
+      <div class="hex h-right"><b>TI</b><small>Información<br>y Sistemas</small></div>
+      <div class="hero-core"><img src="images/logo.png" alt="GrupoCiberOT"></div>
+      <p>CIBERSEGURIDAD QUE<br>IMPULSA LA CONTINUIDAD<br>DE LO ESENCIAL</p>
+    </div>-->
+  </div>
+</section>
+<section class="benefits">
+  <div class="container benefits-grid">
+    <span>Protección de<br>infraestructura crítica</span>
+    <span>Cumplimiento<br>normativo</span>
+    <span >Continuidad<br>operacional</span>
+    <span>Experiencia</span>
+    <span>Alcance<br>regional y global</span>
+    <b>SOLUCIONES REALES PARA<br>UN ENTORNO MÁS SEGURO</b>
+  </div>
+</section>
+<section class="group-section">
+  <div class="container">
+    <p class="eyebrow">UN HOLDING, CAPACIDADES COMPLEMENTARIAS</p>
+    <h2>Nuestro grupo, una visión integrada</h2>
+    <p class="lead center">Sumamos experiencia, tecnología e ingeniería para entregar soluciones completas en ciberseguridad, infraestructura y automatización industrial.</p>
+ <div class="company-grid">
+
+    <article class="company-card">
+        <img src="images/logo-cmc360.png"
+             alt="CMC360 Ciberseguridad OT">
+
+        <p>
+            Consultoría e ingeniería en ciberseguridad OT e IT
+        </p>
+
+        <a href="#">
+            Conocer más →
+        </a>
+    </article>
+
+
+    <article class="company-card">
+        <img src="images/logo-fyh.png"
+             alt="FyH Ingenieros">
+
+        <p>
+            Ingeniería, proyectos y automatización industrial.
+        </p>
+
+        <a href="#">
+            Conocer más →
+        </a>
+    </article>
+
+
+    <article class="company-card">
+        <img src="images/logo-grupociberot.png"
+             alt="GrupoCiberOT">
+
+        <p>
+            Sinergia y trazabilidad entre TI, OT e IoT para
+            entornos industriales y corporativos.
+        </p>
+
+        <a href="#">
+            Conocer más →
+        </a>
+    </article>
+
+</div>
+  </div>
+</section>
+
+<section id="nosotros" class="section">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">NOSOTROS</p><h2>Protegemos lo esencial</h2></div><p>GrupoCiberOT es un holding especializado en ciberseguridad, ingeniería y tecnología, que trabaja para organizaciones críticas, conectando el mundo TI, el entorno industrial OT y los dispositivos IoT, con una visión transversal de seguridad, cumplimiento y continuidad operacional.</p></div>
+    <div class="three-values">
+      <article><span class="icon">↗</span><div><h3>Integración</h3><p>Conectamos tecnología, ingeniería y ciberseguridad.</p></div></article>
+      <article><span class="icon">✓</span><div><h3>Trazabilidad</h3><p>Visión común sobre activos, riesgos y procesos.</p></div></article>
+      <article><span class="icon">▥</span><div><h3>Continuidad</h3><p>Contribuimos a operaciones más seguras, resilientes y sostenibles.</p></div></article>
+    </div>
+  </div>
+  <div class="presence"><div class="container presence-grid"><div><p class="eyebrow">NUESTRA PRESENCIA</p><h2>Capacidad regional y global</h2><p>Acompañamos a organizaciones en Chile, Latinoamérica y Europa, integrando estándares internacionales y mejores prácticas en ciberseguridad.</p></div><img src="images/world-network.svg" alt="Representación de presencia regional y global"><div class="legend"><span><i class="dot blue"></i><b>Chile</b><small>(Base principal)</small></span><span><i class="dot orange"></i><b>Latinoamérica</b><small>(Equipos y alianzas)</small></span><span><i class="dot green"></i><b>Europa</b><small>(Alianzas estratégicas)</small></span></div></div></div>
+
+  <!-- Franja institucional de Nosotros -->
+  <div class="about-tagline">CONECTANDO INDUSTRIAS - PROTEGIENDO EL MAÑANA</div>
+
+  <!-- Liderazgo y experiencia: reemplazar los placeholders por las fotografías reales cuando Diseño las entregue. -->
+  <div class="container team-section">
+    <div class="section-mini-head">
+      <p class="eyebrow">LIDERAZGO Y EXPERIENCIA</p>
+      <h2>Nuestro equipo</h2>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Humberto Aguirre">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Humberto Aguirre</h3><p>VP Administration<br>&amp; Finance</p>
+      </article>
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Marcia Aravena">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Marcia Aravena</h3><p>Manager<br>Management Control</p>
+      </article>
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Fernando Navarrete">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Fernando Navarrete</h3><p>CEO / President</p>
+      </article>
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Marcelo Pérez R.">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Marcelo Pérez R.</h3><p>VP Services &amp;<br>Cybersecurity</p>
+      </article>
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Dismilka Camilo">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Dismilka Camilo</h3><p>Manager Marketing<br>&amp; Communications</p>
+      </article>
+      <article class="team-card">
+        <div class="team-avatar" role="img" aria-label="Foto pendiente de Alan Schwammenhöfer">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="14"/><path d="M15 70c3-17 13-25 25-25s22 8 25 25z"/></svg>
+        </div>
+        <h3>Alan Schwammenhöfer</h3><p>VP Commercial<br>&amp; Business Development</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- Franja de industrias -->
+  <div class="industry-strip">FF.AA - Gobierno - Infraestructura - Minería - Eléctricas - Servicios</div>
+
+  <!-- Vinculación e innovación: los logos reales se incorporarán después de la revisión con Diseño. -->
+  <div class="container network-section">
+    <div class="section-mini-head">
+      <p class="eyebrow">ENFOQUE EN VINCULACIÓN E INNOVACIÓN</p>
+      <h2>Otra parte de nuestro equipo</h2>
+    </div>
+    <div class="partner-placeholders" aria-label="Instituciones y aliados pendientes de incorporar">
+      <div>Universidad de Chile</div>
+      <div>UC | Chile</div>
+      <div>Universidad de Santiago</div>
+      <div>Universidad Andrés Bello</div>
+      <div>Universidad Mayor</div>
+      <div>Universidad de Los Lagos</div>
+      <div>INACAP</div>
+      <div>Universidad de Playa Ancha</div>
+      <div>Universidad Adolfo Ibáñez</div>
+    </div>
+  </div>
+</section>
+
+<section id="soluciones" class="section alt">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">SOLUCIONES</p><h2>Tecnología para proteger entornos críticos</h2></div><p>Integramos soluciones propias y tecnologías globales para ayudar a las organizaciones a reducir riesgos, fortalecer la resiliencia y asegurar la continuidad de sus operaciones críticas.</p></div>
+    <div class="risk-panel"><div><p class="eyebrow">SOLUCIÓN PROPIA</p><h2>OTRISKMAPS</h2><p>Nuestra plataforma OTRISKMAPS permite evaluar, visualizar y gestionar el riesgo en entornos industriales (OT), facilitando la toma de decisiones y el desarrollo de planes de acción efectivos.</p><a class="btn btn-orange" href="#contacto">Conocer más →</a></div><img src="images/ot-riskmaps.svg" alt="Interfaz conceptual de OTRISKMAPS"><div class="feature-list"><span><b>◎ Assessment</b><small>Evaluación del estado de seguridad OT.</small></span><span><b>▱ Mapas de riesgo OT</b><small>Visualización de activos, amenazas y vulnerabilidades.</small></span><span><b>▥ BIA</b><small>Análisis de impacto al negocio.</small></span><span><b>▤ Roadmap</b><small>Planes de acción para una mejora continua.</small></span></div></div>
+    <div class="partner-row"><div><p class="eyebrow">SOLUCIONES TECNOLÓGICAS</p><h2>Alianzas que amplían tus capacidades</h2><p>Trabajamos con líderes tecnológicos globales para integrar soluciones de clase mundial en ciberseguridad, privilegios, conectividad y protección de entornos industriales.</p></div><article class="partner-card"><img src="images/wallix.svg" alt="Wallix"><b>Gestión de accesos privilegiados.</b><p>Protege y controla el acceso a tus sistemas críticos con una gestión segura de identidades y privilegios.</p><a href="#contacto">Conocer más →</a></article><article class="partner-card"><img src="images/vnode.svg" alt="VNode"><b>Conectividad segura.</b><p>Soluciones de acceso remoto seguro para entornos industriales, sin comprometer la operación.</p><a href="#contacto">Conocer más →</a></article></div>
+  </div>
+</section>
+
+<section id="servicios" class="section">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">SERVICIOS</p><h2>Experiencia para operaciones más seguras</h2></div><p>Entregamos servicios especializados en ciberseguridad OT, ingeniería y tecnología, diseñados para reducir riesgos, fortalecer la resiliencia y asegurar la continuidad de las operaciones críticas.</p></div>
+    <div class="services-grid">
+      <article><span class="icon">⌕</span><h3>Evaluación y diagnóstico</h3><p>Análisis del estado de seguridad OT para identificar brechas, vulnerabilidades y oportunidades de mejora.</p></article>
+      <article><span class="icon">✓</span><h3>Estrategia de ciberseguridad OT</h3><p>Diseño de estrategias y planes de acción alineados a los objetivos del negocio y al marco regulatorio.</p></article>
+      <article><span class="icon">▥</span><h3>Conectividad segura</h3><p>Identificación, análisis y priorización de riesgos en activos, procesos y entornos industriales.</p><small class="note">Texto conservado del Figma; conviene validar el título/descripción.</small></article>
+      <article><span class="icon">⚙</span><h3>Ingeniería y tecnología</h3><p>Integración de soluciones de ciberseguridad OT en entornos industriales, considerando la arquitectura y operación existente.</p></article>
+      <article><span class="icon">⌁</span><h3>Implementación</h3><p>Despliegue de soluciones y medidas de seguridad, con un enfoque práctico, seguro y alineado a la operación de cada industria.</p></article>
+      <article><span class="icon">↻</span><h3>Continuidad operacional</h3><p>Desarrollo de planes y medidas para aumentar la resiliencia, gestionar incidentes y asegurar la continuidad de las operaciones críticas.</p></article>
+    </div>
+    <div class="method"><div><p class="eyebrow">NUESTRA METODOLOGÍA</p><h2>Un proceso que genera valor</h2><p>Combinamos conocimiento, experiencia y tecnología para entregar soluciones efectivas y sostenibles.</p></div><div class="steps"><span><b>1- Diagnóstico</b><small>Entendemos tu contexto y evaluamos el estado actual.</small></span><i>›</i><span><b>2- Diseño</b><small>Definimos la estrategia y plan de acción.</small></span><i>›</i><span><b>3- Implementación</b><small>Desplegamos las soluciones con un enfoque seguro y eficiente.</small></span><i>›</i><span><b>4- Resultados</b><small>Medimos el impacto y acompañamos la mejora continua.</small></span></div></div>
+  </div>
+</section>
+
+<section id="industrias" class="section alt">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">INDUSTRIAS</p><h2>Conocimiento de la realidad industrial</h2></div><p>Entendemos los desafíos de cada industria y sus entornos operacionales. Aplicamos nuestra experiencia en ciberseguridad OT, ingeniería y tecnología para entregar soluciones adaptadas a sus necesidades y niveles de riesgo.</p></div>
+    <div class="industries-grid">
+      <article><img src="images/industry-energy.svg" alt=""><div><h3>Energía</h3><p>Protección de infraestructuras críticas en generación, transmisión y distribución.</p></div></article>
+      <article><img src="images/industry-mining.svg" alt=""><div><h3>Minería</h3><p>Seguridad y continuidad en procesos críticos de extracción y procesamiento.</p></div></article>
+      <article><img src="images/industry-oil.svg" alt=""><div><h3>Petróleo y Gas</h3><p>Protección de operaciones de upstream, midstream y downstream.</p></div></article>
+      <article><img src="images/industry-manufacturing.svg" alt=""><div><h3>Manufactura</h3><p>Seguridad de procesos de producción y cadenas de suministro industriales.</p></div></article>
+      <article><img src="images/industry-water.svg" alt=""><div><h3>Agua y Saneamiento</h3><p>Resiliencia en sistemas de control y operación de infraestructuras críticas.</p></div></article>
+      <article><img src="images/industry-transport.svg" alt=""><div><h3>Transporte e Infraestructura</h3><p>Protección de sistemas críticos en transporte, logística y obras estratégicas.</p></div></article>
+    </div>
+    <div class="approach"><div><p class="eyebrow">NUESTRO ENFOQUE</p><h2>Industrias más seguras, operaciones más resilientes</h2><p>Aplicamos experiencia, tecnología y conocimiento normativo para proteger lo que mantiene en movimiento al mundo.</p></div><div class="approach-items"><span><b>✓</b><strong>Entornos críticos</strong><small>Soluciones adaptadas según los riesgos y necesidades de cada industria.</small></span><span><b>⚙</b><strong>Soluciones adaptables</strong><small>Según los riesgos y necesidades de cada industria.</small></span><span><b>▥</b><strong>Continuidad del negocio</strong><small>Operaciones más seguras y resilientes.</small></span></div></div>
+  </div>
+</section>
+
+<section id="regulatorio" class="section">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">MARCO REGULATORIO</p><h2>Cumplimiento hoy, operaciones más seguras mañana</h2></div><p>Apoyamos a las organizaciones en el entendimiento y cumplimiento del marco regulatorio aplicable a la ciberseguridad OT, con un enfoque práctico y orientado a la continuidad operacional.</p></div>
+    <div class="law-banner"><div><b>LEY N° 21.663</b><h3>Marco legal para la ciberseguridad</h3><p>La Ley N° 21.663 establece un marco regulatorio para fortalecer la ciberseguridad en Chile, con foco en la protección de infraestructuras críticas, la gestión de riesgos y la continuidad de los servicios esenciales.</p></div><div><b>Objetivo de la Ley</b><p>Fortalecer la ciberseguridad en el país, resguardando la continuidad de los servicios esenciales y la seguridad de las personas, las organizaciones y el Estado.</p></div></div>
+    <h3 class="subhead">NUESTROS SERVICIOS</h3><p>La ley y sus normativas asociadas establecen, entre otros aspectos:</p>
+    <div class="requirements"><article><h3>Gestión de riesgos</h3><p>Identificación, análisis y tratamiento de riesgos en redes y sistemas de información.</p></article><article><h3>Gobernanza</h3><p>Definición de roles, responsabilidades y políticas de ciberseguridad.</p></article><article><h3>Capacitación y concientización</h3><p>Programas de formación continua para colaboradores y terceros relevantes.</p></article><article><h3>Notificación de incidentes</h3><p>Reporte oportuno de incidentes significativos a la autoridad competente.</p></article><article><h3>Continuidad operacional</h3><p>Implementación de medidas para asegurar la continuidad de los servicios esenciales.</p></article><article><h3>Fiscalización y sanciones</h3><p>Supervisión por parte de la autoridad y eventuales sanciones por incumplimiento.</p></article></div>
+    <div class="standards"><h3>NORMATIVAS Y ESTÁNDARES RELACIONADOS</h3><p>Trabajamos alineados a las principales normativas, estándares y buenas prácticas.</p><div><span>NERC CIP</span><span>ISA/IEC 62443</span><span>NIST</span><span>NIS2</span><span>Otras normativas</span></div></div>
+  </div>
+</section>
+
+<section id="casos" class="section alt">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">CASOS DE ÉXITO</p><h2>Experiencia que genera organizaciones más seguras</h2></div><p>Hemos acompañado a organizaciones de distintas industrias en la protección de sus operaciones críticas, con soluciones de ciberseguridad OT adaptadas a sus desafíos y objetivos.</p></div>
+    <p class="source-note">Esta vista se construye con la estructura del wireframe original; no se recibió una exportación corregida de Figma para esta pantalla.</p>
+    <div class="cases-grid"><article><h3>Energía</h3><b>Mayor resiliencia en infraestructura energética</b><p>Implementación de un programa de gestión de riesgos OT que permitió fortalecer la continuidad operacional y reducir la superficie de ataque en sistemas críticos.</p></article><article><h3>Minería</h3><b>Protección de procesos críticos en faena</b><p>Diseño e implementación de controles de ciberseguridad OT para entornos industriales de alta disponibilidad.</p></article><article><h3>Transporte</h3><b>Seguridad OT en sistemas de transporte</b><p>Evaluación y fortalecimiento de la seguridad en sistemas de control y comunicaciones.</p></article><article><h3>Acuicultura</h3><b>Continuidad operacional en entornos productivos</b><p>Implementación de controles para proteger sistemas de control y monitoreo.</p></article></div>
+  </div>
+</section>
+
+<section id="contacto" class="section contact">
+  <div class="container contact-grid">
+    <div class="contact-info"><p class="eyebrow">CONTACTO</p><h2>Conversemos sobre sus desafíos</h2><p>Estamos listos para apoyar a su organización en la protección de sus operaciones críticas, con soluciones de ciberseguridad OT adaptadas a sus necesidades.</p><div class="contact-list"><span>✉ <b>Escríbanos</b><small>contacto@grupociberot.cl</small></span><span>⌕ <b>Llámenos</b><small>+56 2 1234 5678</small></span><span>◷ <b>Horario de atención</b><small>Lunes a viernes 09:00 - 18:00 (CLT)</small></span><span>⌖ <b>Nuestra Oficina</b><small>Santiago, Chile. Av. del Valle Sur 570, Oficina 401, Ciudad Empresarial, Huechuraba, Santiago.</small></span></div><div class="socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="LinkedIn">LinkedIn</a></div></div>
+    <form class="contact-form" id="contactForm">
+      <h3>Envíenos un mensaje</h3><p>Complete el formulario y nos pondremos en contacto a la brevedad.</p>
+      <label>Nombre<input name="nombre" required placeholder="Nombre Apellido"></label>
+      <label>Empresa<input name="empresa" required placeholder="Nombre de la empresa"></label>
+      <label>Número telefónico<input name="telefono" placeholder="Su número telefónico"></label>
+      <label>Correo electrónico<input name="email" type="email" required placeholder="Correo"></label>
+      <label>¿En qué podemos ayudarle?<textarea name="mensaje" rows="4" required placeholder="Mensaje"></textarea></label>
+      <button class="btn btn-orange" type="submit">Enviar Mensaje →</button>
+      <small>Al enviar este formulario, acepta que sus datos sean utilizados para responder su consulta.</small>
+      <p id="formStatus" class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> GrupoCiberOT</span><a href="#top">Volver arriba ↑</a></div></footer>
+<script src="js/main.js"></script>
 </body>
 </html>

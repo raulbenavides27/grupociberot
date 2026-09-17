@@ -1,0 +1,8 @@
+/* TEAM */
+Website: GrupoCiberOT
+Site: https://grupociberot.cl/
+Contact: contacto@grupociberot.cl
+
+/* SITE */
+Language: es-CL
+Standards: HTML5, CSS3, JavaScript
