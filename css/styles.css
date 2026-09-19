@@ -10,7 +10,6 @@
     --white: #fff;
     --max: 1180px;
 }
-
 * {
     box-sizing: border-box;
 }
@@ -463,6 +462,23 @@ a {
     gap: 35px;
 }
 
+
+.three-values .icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.three-values .icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #2f73c9;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .three-values article {
     display: flex;
     gap: 18px;
@@ -554,6 +570,313 @@ a {
 
 .dot.green {
     background: var(--green);
+}
+
+/* =========================================================
+   NOSOTROS / EQUIPO / VINCULACIÓN
+   ========================================================= */
+
+.about-tagline {
+    background: #eef3ff;
+    color: #24466f;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
+.team-section {
+    padding: 48px 0 42px;
+}
+
+.section-mini-head {
+    margin-bottom: 26px;
+}
+
+.section-mini-head h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+}
+
+.team-card {
+    border: 1px solid #e4e9f2;
+    border-radius: 6px;
+    background: #fff;
+    padding: 14px 10px 16px;
+    text-align: center;
+    min-width: 0;
+}
+
+.team-card img {
+    width: 100%;
+    height: 92px;
+    object-fit: contain;
+    object-position: center bottom;
+    margin: 0 auto 12px;
+}
+
+.team-avatar {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #f0f4fa;
+    display: grid;
+    place-items: center;
+    color: #7891ad;
+    border: 1px solid #dbe4ef;
+}
+
+.team-avatar svg {
+    width: 54px;
+    height: 54px;
+    fill: #7891ad;
+}
+
+.team-card h3 {
+    margin: 0 0 5px;
+    color: var(--orange);
+    font-size: 14px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.team-card p {
+    margin: 0;
+    color: #6d7890;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.industry-strip {
+    background: #eef3ff;
+    color: #24466f;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   ENFOQUE EN VINCULACIÓN E INNOVACIÓN
+   --------------------------------------------------------- */
+
+.network-section {
+    padding: 44px 0 60px;
+}
+
+.network-section .section-mini-head {
+    margin-bottom: 30px;
+}
+
+.partner-placeholders {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.partner-placeholders > div {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+/* Primera fila: 5 logos */
+.partner-placeholders > div:nth-child(1),
+.partner-placeholders > div:nth-child(2),
+.partner-placeholders > div:nth-child(3),
+.partner-placeholders > div:nth-child(4),
+.partner-placeholders > div:nth-child(5) {
+    grid-column: span 2;
+}
+
+/* Segunda fila: 4 logos centrados respecto a la primera */
+.partner-placeholders > div:nth-child(6) {
+    grid-column: 2 / span 2;
+}
+
+.partner-placeholders > div:nth-child(7) {
+    grid-column: 4 / span 2;
+}
+
+.partner-placeholders > div:nth-child(8) {
+    grid-column: 6 / span 2;
+}
+
+.partner-placeholders > div:nth-child(9) {
+    grid-column: 8 / span 2;
+}
+
+/* Tamaños individuales */
+.partner-placeholders > div:nth-child(1) img {
+    width: 150px;
+    max-height: 100px;
+}
+
+.partner-placeholders > div:nth-child(2) img {
+    width: 185px;
+    max-height: 96px;
+}
+
+.partner-placeholders > div:nth-child(3) img {
+    width: 120px;
+    max-height: 130px;
+}
+
+.partner-placeholders > div:nth-child(4) img {
+    width: 170px;
+    max-height: 100px;
+}
+
+.partner-placeholders > div:nth-child(5) img {
+    width: 165px;
+    max-height: 100px;
+}
+
+.partner-placeholders > div:nth-child(6) img {
+    width: 160px;
+    max-height: 86px;
+}
+
+.partner-placeholders > div:nth-child(7) img {
+    width: 155px;
+    max-height: 76px;
+}
+
+.partner-placeholders > div:nth-child(8) img {
+    width: 175px;
+    max-height: 82px;
+}
+
+.partner-placeholders > div:nth-child(9) img {
+    width: 180px;
+    max-height: 80px;
+}
+
+.partner-placeholders img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* =========================================================
+   RESPONSIVE - EQUIPO Y VINCULACIÓN
+   ========================================================= */
+
+@media (max-width: 1050px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .partner-placeholders {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        column-gap: 10px;
+        row-gap: 26px;
+    }
+
+    .partner-placeholders > div:nth-child(-n+5) {
+        grid-column: span 2;
+    }
+
+    .partner-placeholders > div:nth-child(6),
+    .partner-placeholders > div:nth-child(7),
+    .partner-placeholders > div:nth-child(8) {
+        grid-column: span 2;
+    }
+
+    .partner-placeholders > div:nth-child(9) {
+        grid-column: 3 / span 2;
+    }
+
+    .partner-placeholders > div {
+        height: 110px;
+    }
+
+    .partner-placeholders img {
+        max-width: 150px;
+        max-height: 80px;
+    }
+}
+
+@media (max-width: 650px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .network-section {
+        padding: 38px 0 50px;
+    }
+
+    .network-section .section-mini-head {
+        margin-bottom: 24px;
+    }
+
+    .partner-placeholders {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 12px;
+        row-gap: 18px;
+        max-width: 100%;
+    }
+
+    .partner-placeholders > div:nth-child(-n+9) {
+        grid-column: auto;
+    }
+
+    .partner-placeholders > div {
+        height: 95px;
+        padding: 5px;
+    }
+
+    .partner-placeholders img {
+        max-width: 130px;
+        max-height: 70px;
+    }
+
+    .section-mini-head h2 {
+        font-size: 30px;
+    }
+
+    .industry-strip {
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 400px) {
+    .partner-placeholders {
+        column-gap: 8px;
+        row-gap: 14px;
+    }
+
+    .partner-placeholders > div {
+        height: 88px;
+    }
+
+    .partner-placeholders img {
+        max-width: 120px;
+        max-height: 62px;
+    }
 }
 
 /* =========================================================
