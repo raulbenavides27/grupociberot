@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".main-nav");
 
   navToggle?.addEventListener("click", () => {
-    const open = nav.comassList.toggle("open");
+    const open = nav.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(open));
   });
 
   document.querySelectorAll(".main-nav a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav?.comassList.remove("open");
+      nav?.classList.remove("open");
       navToggle?.setAttribute("aria-expanded", "false");
     });
   });
@@ -17,13 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  const form = document.getElementById("contactForm");
-  form?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = document.getElementById("formStatus");
-    if (status) status.textContent = "Formulario preparado. Conecta aquí tu servicio de correo o endpoint antes de publicar.";
-    form.reset();
-  });
 
   document.querySelectorAll(".partner-carousel").forEach((carousel) => {
     const track = carousel.querySelector(".partner-track");
@@ -42,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       current = Math.max(0, Math.min(index, cards.length - 1));
       track.style.transform = `translateX(-${current * getStep()}px)`;
       dots.forEach((dot, i) => {
-        dot.comassList.toggle("active", i === current);
+        dot.classList.toggle("active", i === current);
         dot.setAttribute("aria-current", i === current ? "true" : "false");
       });
       prev.disabled = current === 0;
