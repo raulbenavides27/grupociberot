@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://grupociberot.cl/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://grupociberot.cl/nosotros.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grupociberot.cl/soluciones.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grupociberot.cl/servicios.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grupociberot.cl/industrias.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grupociberot.cl/regulatorio.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grupociberot.cl/contacto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

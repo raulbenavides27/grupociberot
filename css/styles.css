@@ -234,7 +234,7 @@ a {
     background: var(--orange);
     color: #fff;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 1.2;
 
@@ -275,7 +275,7 @@ a {
     top: 49%;
     transform: translateY(-50%);
     margin: 0;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.05;
     letter-spacing: .02em;
     color: #111;
@@ -307,7 +307,7 @@ a {
 }
 
 .hex small {
-    font-size: 9px;
+    font-size: 14px;
     line-height: 1.15;
 }
 
@@ -440,6 +440,12 @@ a {
 
 .section.alt {
     background: #f4f7fc;
+}
+
+/* La sección SOLUCIONES permanece blanca.
+   El fondo azul corresponde únicamente al bloque OTRISKMAPS. */
+#soluciones.section.alt {
+    background: #fff;
 }
 
 .section-head {
@@ -651,7 +657,7 @@ a {
 .team-card p {
     margin: 0;
     color: #6d7890;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.35;
 }
 
@@ -886,10 +892,10 @@ a {
 .risk-panel {
     background: #eef3ff;
     display: grid;
-    grid-template-columns: 1fr 1.15fr .9fr;
-    gap: 30px;
+    grid-template-columns: minmax(240px, 1fr) minmax(280px, 1.15fr) minmax(230px, .9fr);
+    gap: 28px;
     align-items: center;
-    padding: 35px;
+    padding: 28px 34px;
 }
 
 .risk-panel h2 {
@@ -901,62 +907,219 @@ a {
 }
 
 .risk-panel > img {
-    height: 250px;
+    height: 215px;
     width: 100%;
     object-fit: contain;
 }
 
 .feature-list {
     display: grid;
-    gap: 18px;
+    gap: 15px;
 }
 
-.feature-list span {
+.feature-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 11px;
+    min-width: 0;
+}
+
+.feature-icon {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    margin-top: 1px;
+    color: var(--blue);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.55;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.feature-copy {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .feature-list b {
     color: var(--orange);
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 500;
 }
 
 .feature-list small {
-    color: var(--muted);
+    color: #25344a;
+    font-size: 14px;
+    line-height: 1.35;
+    margin-top: 2px;
 }
 
 .partner-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-    margin-top: 30px;
+    grid-template-columns: minmax(230px, .72fr) minmax(0, 1.75fr);
+    gap: 32px;
+    align-items: center;
+    margin-top: 32px;
 }
 
-.partner-row > div {
-    padding: 10px;
+.partner-intro {
+    padding: 0 8px 0 10px;
+}
+
+.partner-intro h2 {
+    margin: 0 0 12px;
+    font-size: clamp(34px, 3.2vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+
+.partner-intro p:not(.eyebrow) {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.partner-carousel {
+    position: relative;
+    min-width: 0;
+    padding: 0 30px 28px;
+}
+
+.partner-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.partner-track {
+    display: flex;
+    gap: 16px;
+    transition: transform .35s ease;
+    will-change: transform;
 }
 
 .partner-card {
-    border: 1px solid var(--border);
-    padding: 28px;
+    flex: 0 0 calc((100% - 16px) / 2);
+    min-width: 0;
+    min-height: 205px;
+    border: 1px solid #d7e1ee;
+    background: #fff;
+    padding: 22px 20px 18px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-shadow: 0 5px 16px rgba(13, 27, 58, .07);
 }
 
 .partner-card img {
-    height: 52px;
-    width: 150px;
+    height: 48px;
+    width: 145px;
+    max-width: 100%;
     object-fit: contain;
-    margin-bottom: 18px;
+    object-position: left center;
+    margin-bottom: 15px;
 }
 
 .partner-card b {
     color: var(--orange);
+    font-size: 14px;
+    line-height: 1.25;
 }
 
 .partner-card p {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 8px 0 14px;
+}
+
+.partner-card a {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.partner-placeholder {
+    width: 145px;
+    height: 48px;
+    margin-bottom: 15px;
+    border: 1px dashed #b8c7da;
+    display: grid;
+    place-items: center;
+    color: #8ba0b8;
+}
+
+.partner-placeholder span {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.partner-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d5dfec;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--blue);
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(13, 27, 58, .08);
+}
+
+.partner-arrow:hover:not(:disabled) {
+    background: var(--blue);
+    color: #fff;
+}
+
+.partner-arrow:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.partner-arrow-prev {
+    left: 0;
+}
+
+.partner-arrow-next {
+    right: 0;
+}
+
+.partner-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.partner-dots button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #cbd7e6;
+    cursor: pointer;
+}
+
+.partner-dots button.active {
+    background: var(--orange);
+    transform: scale(1.25);
 }
 
 .services-grid {
@@ -979,13 +1142,12 @@ a {
     display: block;
     color: #9a5d22;
     margin-top: 8px;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 /* =========================================================
    METODOLOGÍA
    ========================================================= */
-
 .method,
 .approach {
     margin-top: 25px;
@@ -1020,11 +1182,19 @@ a {
 
 .steps small {
     color: var(--muted);
-    font-size: 12px;
+    font-size: 14px;
 }
+/* =========================================================
+   CHEVRONS — METODOLOGÍA
+   ========================================================= */
 
-.steps i {
-    font-size: 30px;
+.steps > img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
     color: var(--orange);
 }
 
@@ -1098,9 +1268,51 @@ a {
 
 .approach-items small {
     color: var(--muted);
-    font-size: 12px;
+    font-size: 14px;
+}
+/* =========================================================
+   INDUSTRIAS — AJUSTE DE TAMAÑO
+   ========================================================= */
+
+#industrias .industries-grid article {
+    height: 96px;
+    min-height: 96px;
+    grid-template-columns: 58px minmax(0, 1fr) 76px;
 }
 
+/* Ícono SVG */
+#industrias .industry-icon {
+    width: 46px;
+    height: 46px;
+    margin-left: 8px;
+}
+
+#industrias .industry-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+/* Texto */
+#industrias .industries-grid article > div {
+    padding: 10px 9px 10px 6px;
+}
+
+#industrias .industries-grid h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+#industrias .industries-grid p {
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+/* Imagen */
+#industrias .industries-grid article > img {
+    width: 76px;
+    height: 94px;
+    object-fit: cover;
+}
 /* =========================================================
    MARCO REGULATORIO
    ========================================================= */
@@ -1342,6 +1554,129 @@ footer {
 }
 
 /* =========================================================
+   RESPONSIVE - SOLUCIONES
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .risk-panel {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .risk-panel > img {
+        height: 200px;
+    }
+
+    .feature-list {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 24px;
+    }
+
+    .partner-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .partner-intro {
+        padding: 0;
+        max-width: 620px;
+    }
+}
+
+@media (max-width: 700px) {
+    #soluciones.section {
+        padding: 58px 0 65px;
+    }
+
+    .risk-panel {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 24px 20px;
+    }
+
+    .risk-panel > img {
+        height: 190px;
+        order: 2;
+    }
+
+    .feature-list {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        order: 3;
+    }
+    .feature-item {
+        gap: 10px;
+    }
+
+    .feature-icon {
+        flex-basis: 27px;
+        width: 27px;
+        height: 27px;
+    }
+
+    .feature-list b {
+        font-size: 13px;
+    }
+
+    .feature-list small {
+        font-size: 12px;
+    }
+
+
+    .partner-row {
+        margin-top: 28px;
+        gap: 22px;
+    }
+
+    .partner-intro {
+        padding: 0;
+    }
+
+    .partner-intro h2 {
+        font-size: 34px;
+    }
+
+    .partner-carousel {
+        padding: 0 26px 26px;
+    }
+
+    .partner-track {
+        gap: 12px;
+    }
+
+    .partner-card {
+        flex-basis: 100%;
+        min-height: 210px;
+        padding: 20px 18px 17px;
+    }
+
+    .partner-arrow {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .risk-panel {
+        padding: 20px 16px;
+    }
+
+    .risk-panel > img {
+        height: 165px;
+    }
+
+    .partner-intro h2 {
+        font-size: 31px;
+    }
+
+    .partner-card {
+        min-height: 200px;
+    }
+}
+
+/* =========================================================
    RESPONSIVE - TABLET
    ========================================================= */
 
@@ -1522,7 +1857,7 @@ footer {
         background: var(--orange);
         color: #fff;
 
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 500;
         line-height: 1.2;
 
@@ -1664,4 +1999,1019 @@ footer {
     .actions .btn span {
         font-size: 12px;
     }
+}
+
+
+/* AJUSTE FINAL - SOLUCIONES / OTRISKMAPS */
+#soluciones .risk-panel > img {
+    height: 270px;
+    width: 100%;
+    max-width: 390px;
+    justify-self: center;
+    object-fit: contain;
+    object-position: center;
+}
+
+#soluciones .risk-panel .btn.btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 38px;
+    padding: 10px 18px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--orange);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#soluciones .risk-panel .btn.btn-orange:hover {
+    background: #c56839;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1100px) {
+    #soluciones .risk-panel > img {
+        height: 240px;
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 700px) {
+    #soluciones .risk-panel > img {
+        height: 230px;
+        max-width: 100%;
+    }
+
+    #soluciones .risk-panel .btn.btn-orange {
+        min-height: 36px;
+        padding: 9px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    #soluciones .risk-panel > img {
+        height: 205px;
+    }
+}
+
+
+/* =========================================================
+   ICONOS DE SERVICIOS — IONICONS LOCALES
+   ========================================================= */
+.services-grid .service-icon {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.services-grid .service-icon img {
+    width: 27px;
+    height: 27px;
+    display: block;
+    object-fit: contain;
+}
+
+.services-grid .service-icon + h3 {
+    margin-top: 0;
+}
+
+/* =========================================================
+   ICONOS DE METODOLOGÍA
+   Mismo tamaño visual que Servicios, con círculo blanco
+   ========================================================= */
+.steps .step-icon {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    margin: 0 auto 10px;
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #336FBE;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.steps .step-icon img {
+    width: 27px;
+    height: 27px;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+}
+
+.steps span {
+    align-items: center;
+}
+
+.steps span b {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .steps .step-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+    }
+
+    .steps .step-icon img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* =========================================================
+   INDUSTRIAS — AJUSTE FIEL AL DISEÑO FIGMA
+   ========================================================= */
+#industrias.section.alt {
+    background: #fff;
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+#industrias .industries-head {
+    grid-template-columns: 1fr 1.12fr;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+
+#industrias .industries-head h2 {
+    font-size: clamp(30px, 3.1vw, 38px);
+    line-height: 1.05;
+    margin-bottom: 0;
+}
+
+#industrias .industries-head > p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+#industrias .industries-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px 14px;
+}
+
+#industrias .industries-grid article {
+    min-height: 80px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 60px;
+    align-items: center;
+    border: 1px solid #dbe5f2;
+    background: #fff;
+    overflow: hidden;
+}
+
+#industrias .industries-grid article > img {
+    width: 60px;
+    height: 78px;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+#industrias .industries-grid article > div {
+    min-width: 0;
+    padding: 8px 7px 8px 4px;
+}
+
+#industrias .industries-grid h3 {
+    margin: 0 0 5px;
+    color: var(--orange);
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+#industrias .industries-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#industrias .industry-icon {
+    width: 38px;
+    height: 38px;
+    margin-left: 7px;
+    border-radius: 50%;
+    background: #dff0ff;
+    display: grid;
+    place-items: center;
+    color: #2764ad;
+}
+
+#industrias .industry-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#industrias .approach {
+    margin-top: 40px;
+    padding: 25px 26px;
+    grid-template-columns: 1.25fr 2.25fr .7fr;
+    gap: 25px;
+    align-items: center;
+    background: #eef3ff;
+}
+
+#industrias .approach-copy h2 {
+    font-size: 29px;
+    line-height: 1.08;
+    margin: 0 0 12px;
+}
+
+#industrias .approach-copy p:not(.eyebrow) {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #25344a;
+}
+
+#industrias .approach-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#industrias .approach-items b {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 8px;
+    border: 1px solid #336FBE;
+    background: transparent;
+    color: #336FBE;
+}
+
+#industrias .approach-items b svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#industrias .approach-items strong {
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+#industrias .approach-items small {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+#industrias .approach-tagline {
+    font-size: 14px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #17233d;
+    text-align: left;
+}
+
+@media (max-width: 1100px) {
+    #industrias .industries-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #industrias .approach {
+        grid-template-columns: 1fr;
+    }
+
+    #industrias .approach-tagline {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    #industrias.section.alt {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #industrias .industries-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    #industrias .industries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #industrias .industries-grid article {
+        height: 82px;
+    }
+
+    #industrias .approach {
+        padding: 24px 20px;
+    }
+
+    #industrias .approach-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   INDUSTRIAS — CORRECCIÓN FINAL FIGMA
+   Este bloque queda al final para que prevalezca sobre
+   las reglas anteriores de .industries-grid.
+   ========================================================= */
+#industrias.section.alt {
+    background: #fff;
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+#industrias .industries-head {
+    grid-template-columns: 1fr 1.12fr;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+
+#industrias .industries-head h2 {
+    font-size: clamp(30px, 3.1vw, 38px);
+    line-height: 1.05;
+    margin-bottom: 0;
+}
+
+#industrias .industries-head > p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* TARJETAS: SVG + TEXTO + IMAGEN */
+#industrias .industries-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px 14px;
+}
+
+#industrias .industries-grid article {
+    min-height: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr) 82px;
+    align-items: center;
+    border: 1px solid #dbe5f2;
+    background: #fff;
+    overflow: hidden;
+}
+
+#industrias .industries-grid .industry-icon {
+    width: 48px;
+    height: 48px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background: #dff0ff;
+    display: grid;
+    place-items: center;
+    color: #2764ad;
+}
+
+#industrias .industries-grid .industry-icon svg {
+    width: 27px;
+    height: 27px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#industrias .industries-grid article > div {
+    min-width: 0;
+    padding: 10px 10px 10px 6px;
+}
+
+#industrias .industries-grid h3 {
+    margin: 0 0 6px;
+    color: var(--orange);
+    font-size: 15px;
+    line-height: 1.15;
+}
+
+#industrias .industries-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+#industrias .industries-grid article > img {
+    width: 82px;
+    height: 98px;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+/* BLOQUE INFERIOR */
+#industrias .approach {
+    margin-top: 40px;
+    padding: 25px 26px;
+    grid-template-columns: 1.25fr 2.25fr .7fr;
+    gap: 25px;
+    align-items: center;
+    background: #eef3ff;
+}
+
+#industrias .approach > div:first-child h2 {
+    font-size: 29px;
+    line-height: 1.08;
+    margin: 0 0 12px;
+}
+
+#industrias .approach > div:first-child p:not(.eyebrow) {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #25344a;
+}
+
+#industrias .approach-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#industrias .approach-items b {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 8px;
+    border: 1px solid #336FBE;
+    background: transparent;
+    color: #336FBE;
+}
+
+#industrias .approach-items strong {
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+#industrias .approach-items small {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+@media (max-width: 1100px) {
+    #industrias .industries-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #industrias .approach {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    #industrias.section.alt {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #industrias .industries-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    #industrias .industries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #industrias .industries-grid article {
+        min-height: 100px;
+        height: 100px;
+        grid-template-columns: 58px minmax(0, 1fr) 78px;
+    }
+
+    #industrias .industries-grid .industry-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    #industrias .industries-grid .industry-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    #industrias .industries-grid article > img {
+        width: 78px;
+        height: 98px;
+    }
+
+    #industrias .approach {
+        padding: 24px 20px;
+    }
+
+    #industrias .approach-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   INDUSTRIAS — NUESTRO ENFOQUE — AJUSTE FINAL FIGMA
+   Reutiliza los SVG locales de images/icons/
+   ========================================================= */
+
+#industrias .approach {
+    margin-top: 40px;
+    padding: 28px 34px;
+    background: #eef3ff;
+
+    display: grid;
+    grid-template-columns: 1.15fr 2fr .65fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* TEXTO PRINCIPAL */
+#industrias .approach-copy {
+    min-width: 0;
+}
+
+#industrias .approach-copy .eyebrow {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+#industrias .approach-copy h2 {
+    margin: 0 0 14px;
+    color: var(--text);
+    font-size: 29px;
+    line-height: 1.08;
+    letter-spacing: -.025em;
+}
+
+#industrias .approach-copy > p:last-child {
+    margin: 0;
+    color: #25344a;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* TRES ELEMENTOS */
+#industrias .approach-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+#industrias .approach-item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* CÍRCULO */
+#industrias .approach-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 9px;
+
+    border: 1px solid #336FBE;
+    border-radius: 50%;
+    background: transparent;
+
+    display: grid;
+    place-items: center;
+    flex: 0 0 48px;
+}
+
+/* SVG LOCAL */
+#industrias .approach-icon img {
+    width: 25px;
+    height: 25px;
+    display: block;
+    object-fit: contain;
+}
+
+/* TÍTULO */
+#industrias .approach-item strong {
+    display: block;
+    margin: 0 0 5px;
+    color: var(--orange);
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* DESCRIPCIÓN */
+#industrias .approach-item small {
+    display: block;
+    max-width: 145px;
+    margin: 0;
+    color: #53627a;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/* FRASE LATERAL */
+#industrias .approach-tagline {
+    color: #17233d;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+    #industrias .approach {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #industrias .approach-tagline {
+        display: none;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 700px) {
+    #industrias .approach {
+        padding: 25px 20px;
+    }
+
+    #industrias .approach-copy h2 {
+        font-size: 27px;
+    }
+
+    #industrias .approach-items {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #industrias .approach-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+    }
+
+    #industrias .approach-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+/* Standalone-page navigation and layout cleanup */
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+.main-nav a.active { color: var(--orange); }
+.main-nav a.active::after { width: 100%; }
+.skip-link:focus { z-index: 1000; }
+@media (max-width: 820px) {
+  .main-nav.open { display: flex; }
+}
+
+
+/* =========================================================
+   MARCO REGULATORIO — RESTAURACIÓN VISUAL
+   ========================================================= */
+
+#regulatorio {
+  background: #fff;
+}
+
+#regulatorio .section-head {
+  grid-template-columns: 1.18fr 1fr;
+  gap: 70px;
+  align-items: start;
+  margin-bottom: 62px;
+}
+
+#regulatorio .section-head h2 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(42px, 4vw, 58px);
+  line-height: .98;
+  letter-spacing: -0.035em;
+}
+
+#regulatorio .section-head > p {
+  max-width: 560px;
+  margin: 4px 0 0;
+  color: #53627a;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+/* BANNER LEY */
+#regulatorio .law-banner {
+  margin: 0;
+  padding: 20px 30px;
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 44px;
+  align-items: center;
+  background: #eef3ff;
+}
+
+#regulatorio .law-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+#regulatorio .reg-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #336fbe;
+  border-radius: 50%;
+  background: #fff;
+}
+
+#regulatorio .reg-icon img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+#regulatorio .law-item b {
+  display: block;
+  margin: 0 0 4px;
+  color: #17233d;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+#regulatorio .law-item h3 {
+  margin: 0 0 7px;
+  color: #17233d;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+#regulatorio .law-item p {
+  margin: 0;
+  color: #53627a;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* SERVICIOS */
+#regulatorio .reg-services-head {
+  margin-top: 11px;
+}
+
+#regulatorio .subhead {
+  margin: 0 0 4px;
+  color: var(--orange);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+#regulatorio .reg-services-head > p {
+  margin: 0;
+  color: #17233d;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+#regulatorio .requirements {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+#regulatorio .requirements article {
+  min-width: 0;
+  min-height: 126px;
+  padding: 12px 10px 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #dbe5f2;
+  background: #fff;
+}
+
+#regulatorio .requirement-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 7px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #bfe3ff;
+  border: 0;
+  flex: 0 0 30px;
+}
+
+#regulatorio .requirement-icon img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+#regulatorio .requirements article h3 {
+  margin: 0 0 6px;
+  color: var(--orange);
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+#regulatorio .requirements article p {
+  margin: 0;
+  color: #53627a;
+  font-size: 9.5px;
+  line-height: 1.25;
+}
+
+/* ESTÁNDARES */
+#regulatorio .standards {
+  margin-top: 10px;
+  padding: 16px 0 0;
+  background: #eef3ff;
+}
+
+#regulatorio .standards-head {
+  padding: 0 0 12px;
+}
+
+#regulatorio .standards-head h3 {
+  margin: 0 0 4px;
+  color: #17233d;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+#regulatorio .standards-head p {
+  margin: 0;
+  color: #17233d;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+#regulatorio .standards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+#regulatorio .standard-card {
+  min-width: 0;
+  min-height: 72px;
+  padding: 10px 11px;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  border: 0;
+  background: #fff;
+  text-align: left;
+}
+
+#regulatorio .standard-media {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#regulatorio .standard-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* NERC: el archivo es panorámico */
+#regulatorio .standard-nerc .standard-media img {
+  width: 48px;
+  height: auto;
+}
+
+/* ISA: logo cuadrado */
+#regulatorio .standard-isa .standard-media img {
+  width: 42px;
+  height: 42px;
+}
+
+/* NIST: imagen de apoyo, sin deformarla */
+#regulatorio .standard-nist .standard-media img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* NIS2 */
+#regulatorio .standard-nis2-mark {
+  border-radius: 50%;
+  background: #0b3b78;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+#regulatorio .standard-book {
+  color: #336fbe;
+  border: 1px solid #336fbe;
+  background: #fff;
+  font-size: 25px;
+  line-height: 1;
+}
+
+#regulatorio .standard-copy {
+  min-width: 0;
+}
+
+#regulatorio .standard-copy b {
+  display: block;
+  margin: 0 0 2px;
+  color: var(--orange);
+  font-size: 9px;
+  line-height: 1.1;
+}
+
+#regulatorio .standard-copy small {
+  display: block;
+  color: #53627a;
+  font-size: 7.5px;
+  line-height: 1.25;
+}
+
+/* TABLET */
+@media (max-width: 1050px) {
+  #regulatorio .section-head {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 40px;
+  }
+
+  #regulatorio .requirements {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #regulatorio .standards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 700px) {
+  #regulatorio .section-head h2 {
+    font-size: 38px;
+  }
+
+  #regulatorio .law-banner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 20px;
+  }
+
+  #regulatorio .requirements {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #regulatorio .standards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #regulatorio .standard-card {
+    min-height: 82px;
+  }
 }

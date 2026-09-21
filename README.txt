@@ -1,18 +1,21 @@
-GRUPOCIBEROT - sitio estático basado en las vistas corregidas de Figma
+GRUPOCIBEROT - sitio estático
 
-Estructura:
-- index.html
+Estructura de páginas:
+- index.html: inicio / home
+- nosotros.html
+- soluciones.html
+- servicios.html
+- industrias.html
+- regulatorio.html
+- contacto.html
+
+Recursos:
 - css/styles.css
 - js/main.js
-- images/ (SVG locales)
+- images/
 - robots.txt
 - sitemap.xml
-- humans.txt
 
-Abrir localmente: doble clic en index.html o usar un servidor local.
+Cada página incluye su propia barra de navegación y footer. La navegación ya no depende de un único scroll largo.
 
-IMPORTANTE:
-- La pantalla "Casos de Éxito" no fue recibida en la exportación corregida de Figma; se implementó según el wireframe original y queda marcada en el código.
-- En "Servicios", el Figma muestra "Conectividad segura" con un texto que describe gestión de riesgos; se conservó literalmente y se dejó una nota de validación.
-- El formulario es visual/cliente. Antes de producción hay que conectarlo a un endpoint de correo (por ejemplo Worker/API).
-- Reemplaza la URL de ejemplo grupociberot.cl si el dominio final es otro.
+Nota: el formulario de contacto es visual/cliente; antes de producción debe conectarse a un endpoint o servicio de correo.
