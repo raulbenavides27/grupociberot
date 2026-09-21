@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".main-nav");
 
   navToggle?.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
+    const open = nav.comassList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(open));
   });
 
   document.querySelectorAll(".main-nav a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav?.classList.remove("open");
+      nav?.comassList.remove("open");
       navToggle?.setAttribute("aria-expanded", "false");
     });
   });
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       current = Math.max(0, Math.min(index, cards.length - 1));
       track.style.transform = `translateX(-${current * getStep()}px)`;
       dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === current);
+        dot.comassList.toggle("active", i === current);
         dot.setAttribute("aria-current", i === current ? "true" : "false");
       });
       prev.disabled = current === 0;

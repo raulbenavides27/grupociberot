@@ -1,7 +1,7 @@
 /* TEAM */
 Website: GrupoCiberOT
-Site: https://grupociberot.cl/
-Contact: contacto@grupociberot.cl
+Site: https://grupociberot.com/
+Contact: contacto@grupociberot.com
 
 /* SITE */
 Language: es-CL

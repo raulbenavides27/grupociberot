@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://grupociberot.cl/sitemap.xml
+Sitemap: https://grupociberot.com/sitemap.xml
