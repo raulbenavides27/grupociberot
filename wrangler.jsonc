@@ -3,6 +3,11 @@
   "name": "grupociberot",
   "compatibility_date": "2026-08-25",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "exclude": [
+      ".git/**",
+      ".github/**",
+      ".wrangler/**"
+    ]
   }
 }
