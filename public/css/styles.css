@@ -696,98 +696,94 @@ a {
 
 .partner-placeholders {
     display: grid;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: 8px;
-    row-gap: 30px;
+    row-gap: 24px;
     align-items: center;
     justify-items: center;
     width: 100%;
-    max-width: 1040px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
 .partner-placeholders > div {
     width: 100%;
-    height: 125px;
+    height: 112px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 6px;
     background: transparent;
     border: 0;
     border-radius: 0;
 }
 
-/* Primera fila: 5 logos */
-.partner-placeholders > div:nth-child(1),
-.partner-placeholders > div:nth-child(2),
-.partner-placeholders > div:nth-child(3),
-.partner-placeholders > div:nth-child(4),
-.partner-placeholders > div:nth-child(5) {
+/* Primera fila: 6 logos, todos con el mismo ancho de columna */
+.partner-placeholders > div:nth-child(-n+6) {
     grid-column: span 2;
 }
 
-/* Segunda fila: 4 logos centrados respecto a la primera */
-.partner-placeholders > div:nth-child(6) {
+/* Segunda fila: 5 logos centrados */
+.partner-placeholders > div:nth-child(7) {
     grid-column: 2 / span 2;
 }
-
-.partner-placeholders > div:nth-child(7) {
+.partner-placeholders > div:nth-child(8) {
     grid-column: 4 / span 2;
 }
-
-.partner-placeholders > div:nth-child(8) {
+.partner-placeholders > div:nth-child(9) {
     grid-column: 6 / span 2;
 }
-
-.partner-placeholders > div:nth-child(9) {
+.partner-placeholders > div:nth-child(10) {
     grid-column: 8 / span 2;
 }
+.partner-placeholders > div:nth-child(11) {
+    grid-column: 10 / span 2;
+}
 
-/* Tamaños individuales */
+/* Tamaños visuales equilibrados */
 .partner-placeholders > div:nth-child(1) img {
-    width: 150px;
-    max-height: 100px;
+    width: 145px;
+    max-height: 88px;
 }
-
 .partner-placeholders > div:nth-child(2) img {
-    width: 185px;
-    max-height: 96px;
-}
-
-.partner-placeholders > div:nth-child(3) img {
-    width: 120px;
-    max-height: 130px;
-}
-
-.partner-placeholders > div:nth-child(4) img {
-    width: 170px;
-    max-height: 100px;
-}
-
-.partner-placeholders > div:nth-child(5) img {
-    width: 165px;
-    max-height: 100px;
-}
-
-.partner-placeholders > div:nth-child(6) img {
-    width: 160px;
+    width: 175px;
     max-height: 86px;
 }
-
-.partner-placeholders > div:nth-child(7) img {
-    width: 155px;
-    max-height: 76px;
+.partner-placeholders > div:nth-child(3) img {
+    width: 112px;
+    max-height: 108px;
 }
-
-.partner-placeholders > div:nth-child(8) img {
-    width: 175px;
+.partner-placeholders > div:nth-child(4) img {
+    width: 165px;
     max-height: 82px;
 }
-
+.partner-placeholders > div:nth-child(5) img {
+    width: 160px;
+    max-height: 88px;
+}
+.partner-placeholders > div:nth-child(6) img {
+    width: 155px;
+    max-height: 88px;
+}
+.partner-placeholders > div:nth-child(7) img {
+    width: 155px;
+    max-height: 78px;
+}
+.partner-placeholders > div:nth-child(8) img {
+    width: 150px;
+    max-height: 72px;
+}
 .partner-placeholders > div:nth-child(9) img {
-    width: 180px;
-    max-height: 80px;
+    width: 165px;
+    max-height: 78px;
+}
+.partner-placeholders > div:nth-child(10) img {
+    width: 170px;
+    max-height: 78px;
+}
+.partner-placeholders > div:nth-child(11) img {
+    width: 155px;
+    max-height: 100px;
 }
 
 .partner-placeholders img {
@@ -811,30 +807,18 @@ a {
     .partner-placeholders {
         grid-template-columns: repeat(6, minmax(0, 1fr));
         column-gap: 10px;
-        row-gap: 26px;
+        row-gap: 22px;
     }
 
-    .partner-placeholders > div:nth-child(-n+5) {
-        grid-column: span 2;
-    }
-
-    .partner-placeholders > div:nth-child(6),
-    .partner-placeholders > div:nth-child(7),
-    .partner-placeholders > div:nth-child(8) {
-        grid-column: span 2;
-    }
-
-    .partner-placeholders > div:nth-child(9) {
-        grid-column: 3 / span 2;
-    }
-
+    /* 3 logos por fila en tablet */
     .partner-placeholders > div {
-        height: 110px;
+        grid-column: span 2 !important;
+        height: 105px;
     }
 
     .partner-placeholders img {
-        max-width: 150px;
-        max-height: 80px;
+        max-width: 145px;
+        max-height: 78px;
     }
 }
 
@@ -858,11 +842,8 @@ a {
         max-width: 100%;
     }
 
-    .partner-placeholders > div:nth-child(-n+9) {
-        grid-column: auto;
-    }
-
     .partner-placeholders > div {
+        grid-column: auto !important;
         height: 95px;
         padding: 5px;
     }
