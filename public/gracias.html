@@ -19,6 +19,152 @@
 .thanks-card .return{display:inline-block;margin-top:24px;color:#fff;background:#e8752b;padding:12px 22px;text-decoration:none;font-weight:700}
 .thanks-card small{display:block;margin-top:18px;color:#718096}
 </style>
+
+<style>
+/* Footer institucional GrupoCiberOT */
+.site-footer {
+  background: #0a1730;
+  color: #dce7f4;
+  margin-top: 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.site-footer .footer-main {
+  padding: 46px 0 34px;
+}
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.45fr) minmax(150px, .7fr) minmax(230px, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+.site-footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.site-footer .footer-logo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: brightness(0) invert(1);
+}
+.site-footer .footer-brand p {
+  margin: 0;
+  max-width: 440px;
+  color: #b9c8da;
+  line-height: 1.65;
+  font-size: 14px;
+}
+.site-footer .footer-title {
+  margin: 0 0 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.site-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.site-footer .footer-links a,
+.site-footer .footer-contact a {
+  color: #c7d5e5;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color .2s ease, transform .2s ease;
+}
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact a:hover {
+  color: #f39a32;
+}
+.site-footer .footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.site-footer .footer-contact span {
+  color: #b9c8da;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.site-footer .footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+.site-footer .footer-socials a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.site-footer .footer-socials a:hover {
+  background: #f39a32;
+  border-color: #f39a32;
+  transform: translateY(-2px);
+}
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 17px 0;
+}
+.site-footer .footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.site-footer .footer-bottom small {
+  color: #91a5bd;
+  font-size: 12px;
+}
+.site-footer .footer-top {
+  color: #c7d5e5;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.site-footer .footer-top:hover {
+  color: #f39a32;
+}
+@media (max-width: 800px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .site-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .site-footer .footer-main {
+    padding: 36px 0 28px;
+  }
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .site-footer .footer-brand {
+    grid-column: auto;
+  }
+  .site-footer .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
 </head>
 <body id="top">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -35,5 +181,51 @@
 <a class="return" href="contacto.html">Volver a contacto</a>
 <small>Serás redirigido automáticamente al formulario en unos segundos.</small>
 </div></section></main>
-<footer><div class="container footer-inner"><span>© <span id="year"></span> GrupoCiberOT</span><a href="#top">Volver arriba ↑</a></div></footer>
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/logo.png" alt="GrupoCiberOT">
+        <p>
+          GrupoCiberOT integra tecnología, ingeniería y ciberseguridad para proteger
+          la continuidad operacional de organizaciones críticas, conectando TI, OT e IoT.
+        </p>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/ciber_ot?stkn=MWoycHFqb29lNHF2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://web.facebook.com/people/Grupo-Ciber-OT/61594408255460/?rdid=iaPsbL35LKAQQTI0&share_url=https%253A%252F%252Fweb.facebook.com%252Fshare%252F1G41mRUAh1%252F%253Fref%253D1%2526_rdc%253D1%2526_rdr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Navegación</h3>
+        <nav class="footer-links" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="soluciones.html">Soluciones</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="industrias.html">Industrias</a>
+          <a href="regulatorio.html">Marco Regulatorio</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact">
+          <a href="mailto:directorio@grupociberot.com">directorio@grupociberot.com</a>
+          <a href="tel:+56965872733">+56 9 658 727 33</a>
+          <span>Santiago · Antofagasta · Concepción</span>
+          <span>Chile · Perú · Argentina</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <small>© <span id="year"></span> GrupoCiberOT. Todos los derechos reservados.</small>
+      <a class="footer-top" href="#top">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
 <script src="js/main.js"></script></body></html>
