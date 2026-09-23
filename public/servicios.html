@@ -159,6 +159,70 @@
 }
 </style>
 
+
+<style>
+/* Ajuste de proporciones de la metodología */
+.method .steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+}
+
+.method .steps > span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.method .steps .step-icon {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  min-height: 72px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.method .steps .step-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.method .steps b {
+  display: block;
+  line-height: 1.2;
+  min-height: 34px;
+}
+
+.method .steps small {
+  display: block;
+  max-width: 155px;
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .method .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .method .steps {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+</style>
+
 </head><body id="top"><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header">
 <div class="container nav-wrap">
@@ -274,7 +338,6 @@
                 Entendemos tu contexto y evaluamos el estado actual.
               </small>
 </span>
-<img alt="" src="images/icons/chevron-forward-outline.svg"/>
 <!-- 2. DISEÑO -->
 <span>
 <strong aria-hidden="true" class="step-icon">
@@ -285,7 +348,6 @@
                 Definimos la estrategia y plan de acción.
               </small>
 </span>
-<img alt="" src="images/icons/chevron-forward-outline.svg"/>
 <!-- 3. IMPLEMENTACIÓN -->
 <span>
 <strong aria-hidden="true" class="step-icon">
@@ -296,7 +358,6 @@
                 Desplegamos las soluciones con un enfoque seguro y eficiente.
               </small>
 </span>
-<img alt="" src="images/icons/chevron-forward-outline.svg"/>
 <!-- 4. RESULTADOS -->
 <span>
 <strong aria-hidden="true" class="step-icon">
