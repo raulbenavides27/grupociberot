@@ -3043,3 +3043,93 @@ body { min-width: 320px; }
     min-height: 82px;
   }
 }
+
+/* =========================================================
+   CORRECCIONES 24-09-2026
+   ========================================================= */
+
+/* Redes sociales de Contacto: mismo naranja y efecto que los botones del hero */
+.socials a {
+    background: var(--orange) !important;
+    color: #fff !important;
+    border-color: var(--orange) !important;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.socials a:hover,
+.socials a:focus-visible {
+    background: #c56839 !important;
+    border-color: #c56839 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+
+/* LinkedIn del equipo: nunca debe salirse de la tarjeta en móvil */
+.team-card {
+    overflow: hidden;
+}
+.team-linkedin {
+    position: static !important;
+    display: flex !important;
+    width: 25px !important;
+    height: 25px !important;
+    margin: 16px auto 0 !important;
+    flex: 0 0 25px;
+}
+.team-linkedin img {
+    width: 25px !important;
+    height: 25px !important;
+    object-fit: contain;
+}
+@media (max-width: 700px) {
+    .team-card {
+        padding-bottom: 18px;
+    }
+    .team-linkedin {
+        width: 25px !important;
+        height: 25px !important;
+        margin: 14px auto 0 !important;
+    }
+}
+
+/* Textos sobre fondos azul claro: tono azul coherente con la franja FF.AA */
+.presence,
+.about-tagline,
+.industry-strip,
+.risk-panel,
+.method,
+.approach,
+.law-banner,
+.standards {
+    color: #24466f;
+}
+.presence h1, .presence h2, .presence h3,
+.about-tagline h1, .about-tagline h2, .about-tagline h3,
+.industry-strip,
+.risk-panel h1, .risk-panel h2, .risk-panel h3,
+.method h1, .method h2, .method h3,
+.approach h1, .approach h2, .approach h3,
+.law-banner h1, .law-banner h2, .law-banner h3,
+.standards h1, .standards h2, .standards h3,
+.standards .standards-head h3,
+.standards .standards-head p {
+    color: #24466f;
+}
+
+/* La caja de formulario también usa el tono azul en textos sobre fondo azul claro */
+.contact-form {
+    color: #24466f;
+}
+.contact-form h3 {
+    color: #24466f;
+}
+.contact-form > p,
+.contact-form label,
+.contact-form > small {
+    color: #24466f;
+}
+
+/* El LinkedIn del footer conserva el mismo tamaño/efecto que los otros círculos */
+.site-footer .footer-socials a {
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}

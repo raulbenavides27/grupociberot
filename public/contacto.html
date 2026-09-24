@@ -294,27 +294,42 @@
 
 
 <style>
-/* Botón principal del formulario */
+/* Botón principal del formulario — mismo tamaño y forma que los botones de Inicio */
 .contact-form .btn-orange {
-    background: #f39a32 !important;
-    background-color: #f39a32 !important;
+    display: block !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: fit-content !important;
+    min-height: 0 !important;
+    padding: 8px 14px !important;
+    margin: 18px auto 0 !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    background: var(--orange) !important;
+    background-color: var(--orange) !important;
     color: #ffffff !important;
-    border: 1px solid #f39a32 !important;
-    transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    transition: background .2s ease, transform .2s ease !important;
 }
 
 .contact-form .btn-orange:hover,
 .contact-form .btn-orange:focus-visible {
-    background: #e57f18 !important;
-    background-color: #e57f18 !important;
-    border-color: #e57f18 !important;
+    background: #c56839 !important;
+    background-color: #c56839 !important;
+    border-color: transparent !important;
     color: #ffffff !important;
+    transform: translateY(-1px) !important;
 }
 
 .contact-form .btn-orange:active {
-    background: #d96f0e !important;
-    background-color: #d96f0e !important;
-    border-color: #d96f0e !important;
+    background: #c56839 !important;
+    background-color: #c56839 !important;
+    transform: translateY(0) !important;
 }
 </style>
 
@@ -360,9 +375,13 @@
 <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
 <span class="sr-only">Facebook</span>
 </a>
+<a aria-label="LinkedIn de GrupoCiberOT" href="https://www.linkedin.com/company/grupociberot/" target="_blank" rel="noopener noreferrer">
+<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+<span class="sr-only">LinkedIn</span>
+</a>
 </div>
 </div>
-<form action="https://formsubmit.co/soluciones@dymcyber.com" method="POST" class="contact-form" id="contactForm">
+<form action="https://formsubmit.co/directorio@grupociberot.com" method="POST" class="contact-form" id="contactForm">
 <input type="hidden" name="_subject" value="Nuevo contacto desde GrupoCiberOT">
 <input type="hidden" name="_next" value="https://grupociberot.com/gracias.html">
 <input type="hidden" name="_captcha" value="false">
@@ -392,6 +411,7 @@
         <div class="footer-socials" aria-label="Redes sociales">
           <a href="https://www.instagram.com/ciber_ot?stkn=MWoycHFqb29lNHF2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
           <a href="https://web.facebook.com/people/Grupo-Ciber-OT/61594408255460/?rdid=iaPsbL35LKAQQTI0&share_url=https%253A%252F%252Fweb.facebook.com%252Fshare%252F1G41mRUAh1%252F%253Fref%253D1%2526_rdc%253D1%2526_rdr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://www.linkedin.com/company/grupociberot/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
         </div>
       </div>
 
