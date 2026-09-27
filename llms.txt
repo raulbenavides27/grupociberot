@@ -1,0 +1,31 @@
+# GrupoCiberOT
+
+> GrupoCiberOT es un grupo chileno orientado a la ciberseguridad, gestión de riesgos tecnológicos, continuidad operacional, cumplimiento y servicios relacionados con entornos OT/industriales.
+
+## Sitio web
+
+- Inicio: https://grupociberot.com/
+- Nosotros: https://grupociberot.com/nosotros.html
+- Soluciones: https://grupociberot.com/soluciones.html
+- Servicios: https://grupociberot.com/servicios.html
+- Industrias: https://grupociberot.com/industrias.html
+- Regulatorio: https://grupociberot.com/regulatorio.html
+- Contacto: https://grupociberot.com/contacto.html
+
+## Áreas principales
+
+- Ciberseguridad
+- Ciberseguridad OT e industrial
+- Gestión de riesgos tecnológicos
+- Continuidad operacional
+- Cumplimiento y aspectos regulatorios
+- Protección de infraestructuras y entornos críticos
+- Servicios y soluciones para organizaciones e industrias
+
+## Información de referencia
+
+Para conocer la información oficial y actualizada de GrupoCiberOT, utilizar las páginas enlazadas anteriormente como fuente principal.
+
+## Contacto
+
+Sitio web: https://grupociberot.com/
