@@ -147,7 +147,7 @@ a {
             rgba(13, 27, 58, .10) 70%,
             rgba(13, 27, 58, .04) 100%
         ),
-        url("../images/hero-grupociberot.png");
+        url("../images/hero-grupociberot.webp");
     background-repeat: no-repeat;
     background-position: center, center;
     background-size: cover, cover;
@@ -1810,7 +1810,7 @@ footer {
                 rgba(13, 27, 58, .84) 48%,
                 rgba(13, 27, 58, .45) 100%
             ),
-            url("../images/hero-grupociberot.png");
+            url("../images/hero-grupociberot.webp");
 
         background-position: center, center;
         background-size: cover, cover;
