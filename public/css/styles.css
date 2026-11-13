@@ -3764,8 +3764,10 @@ body.page-leaving main {
     animation: page-leave-soft .36s cubic-bezier(.4,0,.8,.4) both;
 }
 @media (prefers-reduced-motion: reduce) {
-    body.page-enter main,
+    body.page-enter main {
+        animation: page-enter-soft .22s ease-out both !important;
+    }
     body.page-leaving main {
-        animation: none !important;
+        animation: page-leave-soft .16s ease-out both !important;
     }
 }
