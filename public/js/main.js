@@ -1,30 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Transición manual y consistente entre páginas del mismo sitio.
   const reducePageMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reducePageMotion) {
-    document.body.classList.add("page-enter");
-    window.setTimeout(() => document.body.classList.remove("page-enter"), 720);
+  document.body.classList.add("page-enter");
+  window.setTimeout(() => document.body.classList.remove("page-enter"), reducePageMotion ? 260 : 720);
 
-    let navigationPending = false;
-    document.addEventListener("click", (event) => {
-      const link = event.target.closest("a[href]");
-      if (!link || navigationPending || event.defaultPrevented) return;
-      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (link.target && link.target !== "_self") return;
-      if (link.hasAttribute("download") || link.relList.contains("external")) return;
+  let navigationPending = false;
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link || navigationPending || event.defaultPrevented) return;
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (link.target && link.target !== "_self") return;
+    if (link.hasAttribute("download") || link.relList.contains("external")) return;
 
-      const destination = new URL(link.href, window.location.href);
-      if (destination.origin !== window.location.origin) return;
-      if (destination.pathname === window.location.pathname &&
-          destination.search === window.location.search &&
-          (destination.hash || !window.location.hash)) return;
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin !== window.location.origin) return;
+    if (destination.pathname === window.location.pathname &&
+        destination.search === window.location.search &&
+        (!destination.hash || destination.hash === window.location.hash)) return;
 
-      event.preventDefault();
-      navigationPending = true;
-      document.body.classList.add("page-leaving");
-      window.setTimeout(() => window.location.assign(destination.href), 360);
-    });
-  }
+    event.preventDefault();
+    navigationPending = true;
+    document.body.classList.add("page-leaving");
+    window.setTimeout(() => window.location.assign(destination.href), reducePageMotion ? 180 : 360);
+  });
 
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".main-nav");
