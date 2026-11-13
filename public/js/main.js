@@ -1,28 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Transición visible al entrar y salir de cada página interna.
-  const reducePageMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.body.classList.add("page-enter");
-  window.setTimeout(() => document.body.classList.remove("page-enter"), 450);
-
-  let pageNavigationStarted = false;
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[href]");
-    if (!link || reducePageMotion || pageNavigationStarted) return;
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    if (link.target && link.target !== "_self") return;
-    if (link.hasAttribute("download")) return;
-
-    const destination = new URL(link.href, window.location.href);
-    if (destination.origin !== window.location.origin) return;
-    if (destination.pathname === window.location.pathname && destination.search === window.location.search) return;
-
-    event.preventDefault();
-    pageNavigationStarted = true;
-    document.body.classList.add("page-leaving");
-    window.setTimeout(() => {
-      window.location.assign(destination.href);
-    }, 160);
-  });
+  // La transición entre documentos se gestiona con View Transitions API en CSS.
 
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".main-nav");
