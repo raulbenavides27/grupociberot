@@ -3686,3 +3686,62 @@ body.page-enter main {
 body.page-leaving main {
     animation: page-leave-motion .16s ease-out both !important;
 }
+
+
+/* =========================================================
+   FONDO DE MARCA — OPCIÓN 1: ONDAS TECNOLÓGICAS
+   Aplicación global, incluida la portada. El hero de Inicio
+   conserva su fotografía y composición originales.
+   ========================================================= */
+html,
+body {
+    background-color: #f7f9fc !important;
+}
+
+body {
+    background-image:
+        linear-gradient(rgba(248,250,253,.24), rgba(248,250,253,.24)),
+        url("../images/fondo-ondas-tecnologicas.svg") !important;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center top;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed;
+}
+
+/* Deja que el lienzo global se perciba a través de las secciones. */
+main {
+    background: transparent !important;
+}
+
+main > .section,
+main > #regulatorio,
+main > #soluciones.section.alt,
+main > .group-section {
+    background-color: transparent !important;
+}
+
+main > .section.alt,
+main > #soluciones.section.alt {
+    background: rgba(235,240,247,.48) !important;
+}
+
+.group-section {
+    background: linear-gradient(120deg, rgba(255,255,255,.84), rgba(239,243,249,.86)) !important;
+}
+
+/* La textura de cuadrícula acompaña al fondo, sin competir con sus ondas. */
+main::before {
+    opacity: .10;
+}
+
+@media (max-width: 700px) {
+    body {
+        background-attachment: scroll, scroll;
+        background-position: center top, center top;
+        background-size: auto, auto 100vh;
+    }
+
+    main::before {
+        opacity: .08;
+    }
+}
