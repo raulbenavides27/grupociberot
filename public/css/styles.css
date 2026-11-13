@@ -3666,3 +3666,23 @@ main > #soluciones.section.alt {
         transition: none !important;
     }
 }
+
+
+/* Transición de navegación más suave: sin blur ni desaparición completa. */
+@keyframes page-enter-motion {
+    from { opacity: .78; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes page-leave-motion {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: .94; transform: translateY(-3px); }
+}
+
+body.page-enter main {
+    animation: page-enter-motion .38s ease-out both !important;
+}
+
+body.page-leaving main {
+    animation: page-leave-motion .16s ease-out both !important;
+}
