@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" fill="none">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="900" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFDFE"/>
+      <stop offset="0.52" stop-color="#F8FAFD"/>
+      <stop offset="1" stop-color="#FCFDFE"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="900" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8CFE8" stop-opacity=".26"/>
+      <stop offset=".5" stop-color="#8EAFD4" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#C7D9EC" stop-opacity=".22"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#base)"/>
+  <!-- Ondas verticales continuas: los extremos coinciden para repetir sin cortes -->
+  <path d="M0 0 C210 270 210 930 0 1200" stroke="url(#wave)" stroke-width="3"/>
+  <path d="M0 0 C300 300 300 900 0 1200" stroke="#9DB9DA" stroke-opacity=".12" stroke-width="1.5"/>
+  <path d="M900 0 C690 270 690 930 900 1200" stroke="url(#wave)" stroke-width="3"/>
+  <path d="M900 0 C600 300 600 900 900 1200" stroke="#9DB9DA" stroke-opacity=".12" stroke-width="1.5"/>
+  <path d="M250 0 C430 260 470 940 250 1200" stroke="#B5CBE4" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M650 0 C470 260 430 940 650 1200" stroke="#B5CBE4" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M0 0 C240 300 660 300 900 0" stroke="#D0DEED" stroke-opacity=".13" stroke-width="1.5"/>
+  <path d="M0 1200 C240 900 660 900 900 1200" stroke="#D0DEED" stroke-opacity=".13" stroke-width="1.5"/>
+  <g fill="#7FA6D0" fill-opacity=".18">
+    <circle cx="120" cy="300" r="3"/><circle cx="780" cy="300" r="3"/>
+    <circle cx="250" cy="600" r="2.5"/><circle cx="650" cy="600" r="2.5"/>
+    <circle cx="120" cy="900" r="3"/><circle cx="780" cy="900" r="3"/>
+  </g>
+</svg>
