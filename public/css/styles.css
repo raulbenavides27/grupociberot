@@ -3771,3 +3771,59 @@ body.page-leaving main {
         animation: page-leave-soft .16s ease-out both !important;
     }
 }
+
+
+/* =========================================================
+   FONDO MÓVIL — ONDAS VERTICALES CONTINUAS Y SUAVES
+   Un único motivo vertical repetible, sin mosaicos visibles.
+   ========================================================= */
+@media (max-width: 700px) {
+    html,
+    body {
+        background-color: #fbfcfe !important;
+    }
+
+    body {
+        background-image:
+            linear-gradient(rgba(251,252,254,.28), rgba(251,252,254,.28)),
+            url("../images/fondo-ondas-movil.svg") !important;
+        background-repeat: no-repeat, repeat-y;
+        background-position: center top, center top;
+        background-size: 100% 100%, 100% 1200px;
+        background-attachment: scroll, scroll;
+    }
+
+    main {
+        background: transparent !important;
+    }
+
+    main::before {
+        opacity: .035;
+    }
+
+    main > .section,
+    main > .section.alt,
+    main > #regulatorio,
+    main > #soluciones.section.alt,
+    main > .group-section {
+        background-color: transparent !important;
+    }
+
+    .section.alt,
+    main > .section.alt,
+    main > #soluciones.section.alt {
+        background-image: linear-gradient(
+            115deg,
+            rgba(255,255,255,.16),
+            rgba(235,241,249,.22)
+        ) !important;
+    }
+
+    .group-section {
+        background: linear-gradient(
+            120deg,
+            rgba(255,255,255,.88),
+            rgba(245,248,252,.90)
+        ) !important;
+    }
+}
