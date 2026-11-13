@@ -3353,3 +3353,105 @@ main {
         transform: translateY(-2px);
     }
 }
+
+
+/* =========================================================
+   IDENTIDAD VISUAL REFORZADA — TODAS LAS PÁGINAS
+   Fondo visible y coherente con la paleta institucional.
+   El hero de Inicio conserva su fondo e imagen originales.
+   ========================================================= */
+html {
+    background: #eaf0f9;
+}
+
+body {
+    background-color: #eaf0f9;
+    background-image:
+        radial-gradient(ellipse at 5% 8%, rgba(51, 111, 190, .19) 0, rgba(51, 111, 190, 0) 34rem),
+        radial-gradient(ellipse at 96% 24%, rgba(212, 118, 67, .12) 0, rgba(212, 118, 67, 0) 30rem),
+        radial-gradient(ellipse at 78% 82%, rgba(94, 162, 103, .10) 0, rgba(94, 162, 103, 0) 32rem),
+        linear-gradient(145deg, #e8eff9 0%, #f1f5fb 46%, #e5edf8 100%);
+    background-attachment: fixed;
+}
+
+/* Evita que las secciones blancas oculten el fondo compartido. */
+main {
+    position: relative;
+    background: transparent !important;
+}
+
+main > .section,
+main > .section.alt,
+main > #regulatorio,
+main > #soluciones.section.alt,
+main > .group-section {
+    background-color: transparent !important;
+}
+
+.section.alt,
+.group-section {
+    background-image: linear-gradient(115deg, rgba(255,255,255,.24), rgba(219,231,247,.34)) !important;
+}
+
+/* Los bloques de contenido conservan su fondo propio, ahora con más contraste. */
+.law-banner,
+.risk-panel,
+.method,
+.approach,
+.presence,
+.standards {
+    background: linear-gradient(125deg, rgba(222,234,250,.97), rgba(242,246,253,.98) 58%, rgba(225,235,249,.97)) !important;
+    border-color: rgba(51,111,190,.18);
+    box-shadow: 0 12px 30px rgba(13,27,58,.09);
+}
+
+.company-card,
+.team-card,
+.services-grid article,
+.industries-grid article,
+.requirements article,
+.standard-card,
+.cases-grid article,
+.partner-card,
+.contact-form {
+    border-color: rgba(51,111,190,.18);
+    box-shadow: 0 8px 22px rgba(13,27,58,.075);
+}
+
+/* =========================================================
+   TRANSICIÓN ENTRE PÁGINAS
+   ========================================================= */
+@keyframes page-enter-motion {
+    from { opacity: 0; transform: translateY(22px); filter: blur(3px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes page-leave-motion {
+    from { opacity: 1; transform: translateY(0); filter: blur(0); }
+    to   { opacity: 0; transform: translateY(-16px); filter: blur(2px); }
+}
+
+body.page-enter main {
+    animation: page-enter-motion .62s cubic-bezier(.2,.7,.2,1) both;
+}
+
+body.page-leaving main {
+    animation: page-leave-motion .28s ease-in both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.page-enter main,
+    body.page-leaving main {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        background-image:
+            radial-gradient(ellipse at 0% 5%, rgba(51,111,190,.17), transparent 24rem),
+            radial-gradient(ellipse at 100% 48%, rgba(212,118,67,.09), transparent 22rem),
+            linear-gradient(145deg, #eaf0f9 0%, #f2f6fc 55%, #e7eef9 100%);
+        background-attachment: scroll;
+    }
+}
