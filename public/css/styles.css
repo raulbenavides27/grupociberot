@@ -3464,3 +3464,205 @@ main > #regulatorio {
 main > #soluciones.section.alt {
     background: linear-gradient(115deg, rgba(255,255,255,.24), rgba(219,231,247,.34)) !important;
 }
+
+
+/* =========================================================
+   ESTILO CORPORATIVO REFINADO — PALETA ORIGINAL
+   Menos degradado de color; más composición, textura y capas.
+   ========================================================= */
+html,
+body {
+    background: #f7f8fa !important;
+}
+
+body {
+    background-image:
+        radial-gradient(circle at 12% 10%, rgba(51,111,190,.055), transparent 28rem),
+        radial-gradient(circle at 88% 38%, rgba(212,118,67,.025), transparent 25rem),
+        linear-gradient(180deg, #fafbfc 0%, #f2f5f9 100%) !important;
+    background-attachment: fixed;
+}
+
+/* Textura geométrica muy discreta, sin introducir colores nuevos. */
+main {
+    isolation: isolate;
+    background: transparent !important;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .22;
+    background-image:
+        linear-gradient(rgba(20,45,82,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20,45,82,.025) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+/* Las secciones alternan superficies blancas y gris-azul muy claro. */
+main > .section,
+main > #regulatorio,
+main > #soluciones.section.alt,
+main > .group-section {
+    background: transparent !important;
+}
+
+main > .section.alt,
+main > #soluciones.section.alt {
+    background: rgba(235,240,247,.72) !important;
+    border-top: 1px solid rgba(20,45,82,.055);
+    border-bottom: 1px solid rgba(20,45,82,.055);
+}
+
+.group-section {
+    position: relative;
+    background: linear-gradient(120deg, rgba(255,255,255,.94), rgba(239,243,249,.96)) !important;
+    border: 1px solid rgba(20,45,82,.08);
+    border-radius: 16px;
+    box-shadow: 0 16px 42px rgba(13,27,58,.055);
+}
+
+/* Encabezados con un acento naranja fino: mismo color de marca. */
+.section-head h1::after,
+.section-head h2::after,
+.section-mini-head h2::after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    margin-top: 13px;
+    border-radius: 3px;
+    background: #e66b2e;
+    opacity: .9;
+}
+
+.section-head,
+.section-mini-head {
+    margin-bottom: 28px;
+}
+
+/* Tarjetas: blancas, definidas por borde, sombra y pequeño acento. */
+.company-card,
+.team-card,
+.services-grid article,
+.industries-grid article,
+.requirements article,
+.standard-card,
+.cases-grid article,
+.partner-card,
+.contact-form {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(20,45,82,.10);
+    border-radius: 12px;
+    box-shadow: 0 7px 22px rgba(13,27,58,.055);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.company-card::before,
+.team-card::before,
+.services-grid article::before,
+.industries-grid article::before,
+.requirements article::before,
+.standard-card::before,
+.cases-grid article::before,
+.partner-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1f4f86 0%, #397fc2 68%, #e66b2e 100%);
+    opacity: .82;
+}
+
+.company-card:hover,
+.team-card:hover,
+.services-grid article:hover,
+.industries-grid article:hover,
+.requirements article:hover,
+.standard-card:hover,
+.cases-grid article:hover,
+.partner-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(51,111,190,.24);
+    box-shadow: 0 16px 34px rgba(13,27,58,.11);
+}
+
+/* Paneles destacados con capas, no con grandes manchas de color. */
+.law-banner,
+.risk-panel,
+.method,
+.approach,
+.presence,
+.standards {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.97), rgba(239,243,249,.96)) !important;
+    border: 1px solid rgba(20,45,82,.09);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(13,27,58,.065);
+}
+
+.law-banner::before,
+.risk-panel::before,
+.method::before,
+.approach::before {
+    width: 180px;
+    height: 180px;
+    right: -85px;
+    top: -100px;
+    background: radial-gradient(circle, rgba(51,111,190,.09), transparent 72%);
+}
+
+/* Separadores de sección elegantes y discretos. */
+.section + .section {
+    border-top: 1px solid rgba(20,45,82,.045);
+}
+
+@media (max-width: 700px) {
+    body {
+        background-attachment: scroll;
+        background-image:
+            radial-gradient(circle at 10% 5%, rgba(51,111,190,.05), transparent 20rem),
+            linear-gradient(180deg, #fafbfc 0%, #f2f5f9 100%) !important;
+    }
+
+    main::before {
+        background-size: 30px 30px;
+        opacity: .14;
+    }
+
+    .group-section {
+        border-radius: 12px;
+    }
+
+    .company-card:hover,
+    .team-card:hover,
+    .services-grid article:hover,
+    .industries-grid article:hover,
+    .requirements article:hover,
+    .standard-card:hover,
+    .cases-grid article:hover,
+    .partner-card:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .company-card,
+    .team-card,
+    .services-grid article,
+    .industries-grid article,
+    .requirements article,
+    .standard-card,
+    .cases-grid article,
+    .partner-card {
+        transition: none !important;
+    }
+}
