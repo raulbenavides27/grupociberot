@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-
+  // Carrusel de aliados: se conserva su comportamiento actual.
   document.querySelectorAll(".partner-carousel").forEach((carousel) => {
     const track = carousel.querySelector(".partner-track");
     const cards = [...carousel.querySelectorAll(".partner-card")];
@@ -47,4 +47,48 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => update(current));
     update(0);
   });
+
+  // Apariciones diferenciadas por tipo de contenido.
+  const motionGroups = [
+    [".section-head", "slide-left"],
+    [".section-mini-head", "soft"],
+    [".company-card, .team-card, .partner-card", "scale"],
+    [".services-grid article, .cases-grid article", "rise"],
+    [".industries-grid article", "slide-right"],
+    [".requirements article, .standard-card", "rise"],
+    [".law-banner, .risk-panel, .method, .approach, .presence", "soft"],
+    [".contact-info", "slide-left"],
+    [".contact-form", "slide-right"]
+  ];
+
+  motionGroups.forEach(([selector, effect]) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+      if (element.closest(".hero")) return;
+      element.dataset.reveal = effect;
+      element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 85}ms`);
+    });
+  });
+
+  const revealElements = document.querySelectorAll("[data-reveal]");
+  if (!revealElements.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  document.documentElement.classList.add("js-motion");
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      currentObserver.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -45px 0px"
+  });
+
+  revealElements.forEach((element) => observer.observe(element));
 });
