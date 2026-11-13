@@ -3455,3 +3455,12 @@ body.page-leaving main {
         background-attachment: scroll;
     }
 }
+
+
+/* Refuerzo de secciones que tenían fondos blancos declarados por ID. */
+main > #regulatorio {
+    background: transparent !important;
+}
+main > #soluciones.section.alt {
+    background: linear-gradient(115deg, rgba(255,255,255,.24), rgba(219,231,247,.34)) !important;
+}
