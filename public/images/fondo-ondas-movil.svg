@@ -1,29 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" fill="none">
   <defs>
-    <linearGradient id="base" x1="0" y1="0" x2="900" y2="1200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FCFDFE"/>
-      <stop offset="0.52" stop-color="#F8FAFD"/>
-      <stop offset="1" stop-color="#FCFDFE"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="900" y2="1600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFEFF"/><stop offset=".5" stop-color="#FAFBFD"/><stop offset="1" stop-color="#FDFEFF"/>
     </linearGradient>
-    <linearGradient id="wave" x1="0" y1="0" x2="900" y2="1200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#B8CFE8" stop-opacity=".26"/>
-      <stop offset=".5" stop-color="#8EAFD4" stop-opacity=".13"/>
-      <stop offset="1" stop-color="#C7D9EC" stop-opacity=".22"/>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="900" y2="1600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A9C4E1" stop-opacity=".08"/><stop offset=".48" stop-color="#86A9D0" stop-opacity=".12"/><stop offset="1" stop-color="#B7CDE5" stop-opacity=".07"/>
     </linearGradient>
   </defs>
-  <rect width="900" height="1200" fill="url(#base)"/>
-  <!-- Ondas verticales continuas: los extremos coinciden para repetir sin cortes -->
-  <path d="M0 0 C210 270 210 930 0 1200" stroke="url(#wave)" stroke-width="3"/>
-  <path d="M0 0 C300 300 300 900 0 1200" stroke="#9DB9DA" stroke-opacity=".12" stroke-width="1.5"/>
-  <path d="M900 0 C690 270 690 930 900 1200" stroke="url(#wave)" stroke-width="3"/>
-  <path d="M900 0 C600 300 600 900 900 1200" stroke="#9DB9DA" stroke-opacity=".12" stroke-width="1.5"/>
-  <path d="M250 0 C430 260 470 940 250 1200" stroke="#B5CBE4" stroke-opacity=".16" stroke-width="2"/>
-  <path d="M650 0 C470 260 430 940 650 1200" stroke="#B5CBE4" stroke-opacity=".16" stroke-width="2"/>
-  <path d="M0 0 C240 300 660 300 900 0" stroke="#D0DEED" stroke-opacity=".13" stroke-width="1.5"/>
-  <path d="M0 1200 C240 900 660 900 900 1200" stroke="#D0DEED" stroke-opacity=".13" stroke-width="1.5"/>
-  <g fill="#7FA6D0" fill-opacity=".18">
-    <circle cx="120" cy="300" r="3"/><circle cx="780" cy="300" r="3"/>
-    <circle cx="250" cy="600" r="2.5"/><circle cx="650" cy="600" r="2.5"/>
-    <circle cx="120" cy="900" r="3"/><circle cx="780" cy="900" r="3"/>
+  <rect width="900" height="1600" fill="url(#paper)"/>
+  <path d="M-220 0 C210 250 210 520 -70 790 S-210 1290 180 1600" stroke="url(#ribbon)" stroke-width="3"/>
+  <path d="M-170 0 C260 260 260 530 -20 800 S-160 1300 230 1600" stroke="#91B2D6" stroke-opacity=".07" stroke-width="1.4"/>
+  <path d="M1120 0 C690 250 690 520 970 790 S1110 1290 720 1600" stroke="url(#ribbon)" stroke-width="3"/>
+  <path d="M1070 0 C640 260 640 530 920 800 S1060 1300 670 1600" stroke="#91B2D6" stroke-opacity=".07" stroke-width="1.4"/>
+  <path d="M160 0 C390 330 390 570 250 820 S190 1300 420 1600" stroke="#9AB8D9" stroke-opacity=".08" stroke-width="1.5"/>
+  <path d="M740 0 C510 330 510 570 650 820 S710 1300 480 1600" stroke="#9AB8D9" stroke-opacity=".08" stroke-width="1.5"/>
+  <path d="M20 420 C220 330 390 360 520 460" stroke="#D9783C" stroke-opacity=".15" stroke-width="2" stroke-linecap="round"/>
+  <path d="M880 1120 C680 1030 510 1060 380 1160" stroke="#D9783C" stroke-opacity=".12" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M700 160 C570 320 570 440 650 570" stroke="#6D9F83" stroke-opacity=".08" stroke-width="1.5"/>
+  <path d="M200 1030 C330 1190 330 1310 250 1440" stroke="#6D9F83" stroke-opacity=".08" stroke-width="1.5"/>
+  <g fill="#6E9CC8" fill-opacity=".12">
+    <circle cx="250" cy="820" r="3"/><circle cx="650" cy="820" r="3"/>
+    <circle cx="520" cy="460" r="2.5"/><circle cx="380" cy="1160" r="2.5"/>
   </g>
 </svg>
