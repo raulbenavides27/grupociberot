@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Transición visible al entrar y salir de cada página interna.
   const reducePageMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.body.classList.add("page-enter");
-  window.setTimeout(() => document.body.classList.remove("page-enter"), 700);
+  window.setTimeout(() => document.body.classList.remove("page-enter"), 450);
 
   let pageNavigationStarted = false;
   document.addEventListener("click", (event) => {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("page-leaving");
     window.setTimeout(() => {
       window.location.assign(destination.href);
-    }, 280);
+    }, 160);
   });
 
   const navToggle = document.querySelector(".nav-toggle");
