@@ -3827,3 +3827,45 @@ body.page-leaving main {
         ) !important;
     }
 }
+
+
+/* =========================================================
+   FONDO FINAL — ONDAS SUTILES, SIN MOSAICOS NI CORTES
+   El fondo queda fijo detrás del contenido: no se repite
+   al desplazarse por páginas largas.
+   ========================================================= */
+html {
+    background: #fbfcfe !important;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    background: transparent !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("../images/fondo-ondas-tecnologicas.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    body::before {
+        background-image: url("../images/fondo-ondas-movil.svg");
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        background-attachment: scroll;
+    }
+}
